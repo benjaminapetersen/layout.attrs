@@ -1,0 +1,88 @@
+@import 'variables';
+
+
+
+//
+// body flex attrs can help do mobile/responsive
+// - funny things may happen here :)
+//
+// body {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+// @media all and (max-width: 400px) {
+//     body {
+//         flex-flow: column wrap;
+//     }
+// }
+// @media all and (max-width: 400px) {
+//     /* change below 400px */
+//     body {
+//         flex-flow: column wrap;
+//     }
+//     // how to do this properly?
+//     // prob should be an override on 'flex' attribute, yeah?
+//     // TODO: make this simple & automatic.
+//     .things-that-should-change-on-media-query {
+//         /* Return them to document order and make all full width*/
+//         order: 0;
+//         flex: none;
+//     }
+// }
+
+
+/*
+    How to get an adaptive layout with flexbox?
+    - could have 'row'(?) classes, but these are loaded since row/column is
+      reserved for flexbox/
+*/
+
+[mobile-row] {
+
+}
+[tablet-row] {
+    // row if tablet, below collapses to column?
+}
+[portrait-row] {
+    // row if portrait, below collapses to column?
+}
+[landscape-row] {
+    // row if landscape, below collapses to column?
+}
+
+
+
+// Generate various shadows
+// TODO: can update and just use $px-map
+@each $size, $num in $num-map {
+
+    [shadow-#{$size}] {
+        box-shadow: 0px 0px #{$num}px #{$num}px rgba(156,156,156,1);
+    }
+
+    .shadow-#{$size} {
+        box-shadow: 0px 0px #{$num}px #{$num}px rgba(156,156,156,1);
+    }
+
+    /* experimental offsets, left only currently */
+    [shadow-offset-#{$size}] {
+        box-shadow: #{$num}px #{$num}px 0px 0px rgba(156,156,156,1);
+    }
+
+    .shadow-offset-#{$size} {
+        box-shadow: #{$num}px #{$num}px 0px 0px rgba(156,156,156,1);
+    }
+}
+
+
+@each $size, $num in $num-map {
+
+    [round-#{$size}] {
+        border-radius: #{$num}px;
+    }
+
+    .round-#{$size} {
+        border-radius: #{$num}px;
+    }
+
+}

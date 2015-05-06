@@ -1,0 +1,40 @@
+/* padding sizes */
+@each $size, $px in $num-map {
+    [pad-#{$size}] {
+        padding: px($px);
+    }
+}
+/* padding side overrides */
+@each $size, $px in $num-map {
+    [pad-sides-#{$size}] {
+        padding-left: px($px * 2);
+        padding-right: px($px * 2);
+    }
+}
+/* padding top & bottom overrides */
+@each $size, $px in $num-map {
+    [pad-top-bottom-#{$size}] {
+        padding-top: px($px * 2);
+        padding-bottom: px($px * 2);
+    }
+}
+/* margin sizes */
+@each $size, $px in $num-map {
+    [mar-#{$size}] {
+        margin: px($px);
+    }
+}
+/* margin side overrides */
+@each $size, $px in $num-map {
+    [mar-sides-#{$size}] {
+        margin-left: px($px * 2);
+        margin-right: px($px * 2);
+    }
+}
+/* margin top & bottom overrides */
+@each $size, $px in $num-map {
+    [mar-top-bottom-#{$size}] {
+        margin-top: px($px * 2);
+        margin-bottom: px($px * 2);
+    }
+}

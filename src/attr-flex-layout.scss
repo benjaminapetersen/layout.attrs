@@ -1,0 +1,220 @@
+/*
+    NAME THIS THING IF IT DOESN'T SUCK
+    possibilitie:
+        paint the fence
+            - layout is defined in attributes, a scaffolding, the 'fence'
+            - classes are reserved for the paint job, the theme
+
+    ISSUES
+        - no autoprefix
+        - autoprefixer
+        - data-* on attribute version
+        - styles version
+
+    FLEX REFERENCE
+        https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+        - display
+            - set to flex to create a flex container
+        - flex-direction
+            - establish main axis, default row
+        - flex-wrap
+            - allow items to wrap to next line or force to fit on single line
+            - default: nowrap
+        - flex-flow
+            - shorthand for flex-direction, flex-wrap combined
+        - justify-content
+            - align items on main axis
+        - align-items
+            - flex item laid out along cross axis on the current line
+        - align-content
+            - align items on cross axis
+        - order
+            - override source order of layout of children
+        - flex-grow
+            - ability for flex item to grow, default 1
+        - flex-shrink
+            - ability for flex item to shrink, default 1
+        - flex-basis
+            - default size of element before space distributed, default auto
+        - flex
+            - shorthand for flex-grow, flex-shrink, flex-basis combined
+        - align-self
+            - overrides the align-items value on parent
+*/
+
+/* display alternates
+----------------------------------------------- */
+[block] {
+    display: block;
+}
+[inline] {
+    display: inline-block;
+}
+
+/* positioning alternates
+----------------------------------------------- */
+[absolute] {
+    position: absolute;
+}
+[relative] {
+    position: relative;
+}
+[top] {
+    top: 0px;
+}
+[bottom] {
+    bottom: 0px;
+}
+[left] {
+    left: 0px;
+}
+[right] {
+    right: 0px;
+}
+
+/* basic flex attrs
+----------------------------------------------- */
+
+[layout] {
+    display: flex; /* flex container */
+}
+
+[flex] {
+    flex: 1; /* primary flex child*/
+}
+
+/* directional */
+[column] {
+    flex-direction: column;
+}
+
+[column="reverse"],
+[column][reverse] {
+    flex-direction: column-reverse;
+}
+
+[row] {
+    flex-direction: row;
+}
+
+[row="reverse"],
+[row][reverse] {
+    flex-direction: row-reverse;
+}
+
+[wrap] {
+    flex-wrap: wrap;
+}
+
+
+[fit] {
+    margin: 0px;
+    width: 100%;
+    min-height: auto;
+    height: inherit; /* 100%? */
+}
+
+
+/* ordering... can do order-1,2,3, or first, second third...? */
+@for $i from 0 through 10 {
+    [order-#{$i}] {
+        order: $i;
+    }
+}
+
+[first] {
+    order: 1;
+}
+[second] {
+    order: 2;
+}
+[third] {
+    order: 3;
+}
+[fourth] {
+    order: 4;
+}
+[fifth] {
+    order: 5;
+}
+[sixth] {
+    order: 6;
+}
+[seventh] {
+    order: 7;
+}
+[eigth] {
+    order: 8;
+}
+[ninth] {
+    order: 9;
+}
+[tenth] {
+    order: 10;
+}
+/*
+    other ways to indicate grid/% of available space?
+
+    box-<?> {
+        ....
+    }
+
+*/
+
+/*
+    aligning child items on primary axis
+    TODO: NAME?!?!?!?
+*/
+[primary-axis-start] {
+    align-items: flex-start;
+}
+[primary-axis-end] {
+    align-items: flex-end;
+}
+[primary-axis-center] {
+    align-items: center;
+}
+[primary-axis-baseline] {
+    align-items: baseline;
+}
+[primary-axis-stretch] {
+    align-items: stretch;
+}
+
+/*
+    align child items on cross axis
+    TODO: NAME?!?!?!?
+*/
+[secondary-axis-stretch] {
+    align-content: flex-start;
+}
+[secondary-axis-start] {
+    align-content: flex-start;
+}
+[secondary-axis-end] {
+    align-content: flex-end;
+}
+[secondary-axis-center] {
+    align-content: center;
+}
+[secondary-axis-space-between] {
+    align-content: space-between;
+}
+[secondary-axis-space-around] {
+    align-content: space-around;
+}
+[secondary-axis-stretch] {
+    align-content: stretch;
+}
+
+
+
+
+
+
+
+
+
+
+
+

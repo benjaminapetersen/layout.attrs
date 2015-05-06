@@ -1,0 +1,21 @@
+/*
+    if you hide something, you really want it hidden!
+    - todo:
+       - generate attr, data-attr, class
+*/
+[hide] {
+    display: none !important;
+}
+
+
+[height-max] {
+    height: 100%;
+}
+
+[overflow-hidden] {
+    overflow: hidden;
+}
+
+[scrollable] {
+    overflow: scroll;
+}
