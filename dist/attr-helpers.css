@@ -42,6 +42,19 @@
 [scrollable] {
   overflow: scroll; }
 
+[outline] {
+  outline: 1px solid #990000; }
+
+[mar-left-auto] {
+  margin-left: auto; }
+
+[mar-right-auto] {
+  margin-right: auto; }
+
+[margins-auto] {
+  margin-left: auto;
+  margin-right: auto; }
+
 /* padding sizes */
 [pad-nil] {
   padding: 0px; }

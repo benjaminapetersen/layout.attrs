@@ -1,15 +1,27 @@
 // primarily for em() function
 $base-font: 14;
 
+
+// This set is quite small.
 $num-nil: 0;
-$num-xs: 1;
-$num-sm: 2;
-$num-md: 3;
-$num-lg: 5;
-$num-xl: 8;
-$num-xxl: 10;
-$num-xxxl: 12;
-$num-xxxxl: 15;
+// $num-xs: 1;
+// $num-sm: 2;
+// $num-md: 3;
+// $num-lg: 5;
+// $num-xl: 8;
+// $num-xxl: 10;
+// $num-xxxl: 12;
+// $num-xxxxl: 15;
+// $num-max: 300;
+// Is larger numbers better?
+$num-xs: 2;
+$num-sm: 4;
+$num-md: 6;
+$num-lg: 10;
+$num-xl: 15;
+$num-xxl: 20;
+$num-xxxl: 30;
+$num-xxxxl: 40;
 $num-max: 300;
 
 // use functions to make units:
