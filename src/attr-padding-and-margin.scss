@@ -1,6 +1,3 @@
-[outline] {
-    outline: 1px solid #990000;
-}
 [mar-left-auto] {
     margin-left: auto;
 }
@@ -15,7 +12,7 @@
 /* padding sizes */
 @each $size, $px in $num-map {
     [pad-#{$size}] {
-        padding: px($px);
+        padding: px($px) px($px * 2);
     }
 }
 /* padding side overrides */
@@ -35,7 +32,7 @@
 /* margin sizes */
 @each $size, $px in $num-map {
     [mar-#{$size}] {
-        margin: px($px);
+        margin: px($px) px($px * 2);
     }
 }
 /* margin side overrides */

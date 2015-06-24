@@ -1,19 +1,35 @@
 Work in progress...
 
-# Bricks
-An experiment in composable css attributes for building UI with flexbox in mind. Inspired by Polymer layout &amp; Angular Material CSS.
+# layout.attrs
+An experiment in composable attributes for building UI with flexbox in mind. 
+Inspired by [Angular Material](https://material.angularjs.org/latest/#/layout/grid) 
+& [Polymer](https://www.polymer-project.org/0.5/docs/polymer/layout-attrs.html)
+layout modules.
 
+## A simple example
 
-# Painting The Fence
+Use the attributes like this:
 
-So first you build a structure, then you paint it.  Thats the idea behind this
-small css lib based on flexbox.  The layout is entirely generated with
-attributes, then classes are used to provide the look and feel.  There is a
-clear separation of concerns between structural and cosmetic styles.  The
-cosmetics are up to you to provide (there are a few fun little helpers and
-things provided), this lib provides the foundation.
+```html
+<div layout row reverse align-items="center">
+  <div flex>flex foo</div>
+  <div layout column>
+    <div flex grow="2" shrink="2">flex bar</div>
+    <div>no flex baz</div>
+  </div>
+  <div>no flex.</div>
+</div>
 
-## data-* required to be html5 compliant?
+```
 
-Thinking about this. Sure is ugly :)
+## Experiments with responsive layouts
 
+Currently generating ideas for layouts that adjust with media queries:
+
+```html
+<div layout mobile="column" desktop="row">
+  <div>nav</div>
+  <div flex>content</div>
+  <div>other</div>
+</div>
+```

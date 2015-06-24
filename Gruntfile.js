@@ -11,6 +11,7 @@ module.exports = function(grunt) {
                 files: {
                     'dist/attr-helpers.css': 'src/attr-helpers.scss',
                     'dist/attr-flex-layout.css': 'src/attr-flex-layout.scss',
+                    'dist/attr-positioning.css': 'src/attr-positioning.scss',
                     'dist/class-helpers.css': 'src/class-helpers.scss',
                     'dist/social.css' : 'src/social.scss',
                     'dist/experiments.css' : 'src/experiments.scss',

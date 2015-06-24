@@ -15,6 +15,8 @@
 
 
 */
+/* axis maps
+----------------------------------------------- */
 /*
     - generates values in ems based on px sizes
     - $base-font variable in variables.scss can change scale
@@ -33,6 +35,22 @@
 [hide] {
   display: none !important; }
 
+/* various outlines
+----------------------------------------------- */
+[outline], [outline="red"] {
+  outline: 1px solid #990000; }
+
+[outline="333"] {
+  outline: 1px solid #333; }
+
+[outline="666"] {
+  outline: 1px solid #666; }
+
+[outline="999"] {
+  outline: 1px solid #999; }
+
+/* attrs describing functionality
+----------------------------------------------- */
 [height-max] {
   height: 100%; }
 
@@ -42,8 +60,17 @@
 [scrollable] {
   overflow: scroll; }
 
-[outline] {
-  outline: 1px solid #990000; }
+[truncate] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+[break-word] {
+  word-break: break-all;
+  word-break: break-word; }
+
+[nowrap] {
+  white-space: nowrap; }
 
 [mar-left-auto] {
   margin-left: auto; }
@@ -57,34 +84,34 @@
 
 /* padding sizes */
 [pad-nil] {
-  padding: 0px; }
+  padding: 0px 0px; }
 
 [pad-xs] {
-  padding: 1px; }
+  padding: 2px 4px; }
 
 [pad-sm] {
-  padding: 2px; }
+  padding: 4px 8px; }
 
 [pad-md] {
-  padding: 3px; }
+  padding: 6px 12px; }
 
 [pad-lg] {
-  padding: 5px; }
+  padding: 10px 20px; }
 
 [pad-xl] {
-  padding: 8px; }
+  padding: 15px 30px; }
 
 [pad-xxl] {
-  padding: 10px; }
+  padding: 20px 40px; }
 
 [pad-xxxl] {
-  padding: 12px; }
+  padding: 30px 60px; }
 
 [pad-xxxxl] {
-  padding: 15px; }
+  padding: 40px 80px; }
 
 [pad-max] {
-  padding: 300px; }
+  padding: 300px 600px; }
 
 /* padding side overrides */
 [pad-sides-nil] {
@@ -92,36 +119,36 @@
   padding-right: 0px; }
 
 [pad-sides-xs] {
-  padding-left: 2px;
-  padding-right: 2px; }
-
-[pad-sides-sm] {
   padding-left: 4px;
   padding-right: 4px; }
 
+[pad-sides-sm] {
+  padding-left: 8px;
+  padding-right: 8px; }
+
 [pad-sides-md] {
-  padding-left: 6px;
-  padding-right: 6px; }
+  padding-left: 12px;
+  padding-right: 12px; }
 
 [pad-sides-lg] {
-  padding-left: 10px;
-  padding-right: 10px; }
-
-[pad-sides-xl] {
-  padding-left: 16px;
-  padding-right: 16px; }
-
-[pad-sides-xxl] {
   padding-left: 20px;
   padding-right: 20px; }
 
-[pad-sides-xxxl] {
-  padding-left: 24px;
-  padding-right: 24px; }
-
-[pad-sides-xxxxl] {
+[pad-sides-xl] {
   padding-left: 30px;
   padding-right: 30px; }
+
+[pad-sides-xxl] {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+[pad-sides-xxxl] {
+  padding-left: 60px;
+  padding-right: 60px; }
+
+[pad-sides-xxxxl] {
+  padding-left: 80px;
+  padding-right: 80px; }
 
 [pad-sides-max] {
   padding-left: 600px;
@@ -133,36 +160,36 @@
   padding-bottom: 0px; }
 
 [pad-top-bottom-xs] {
-  padding-top: 2px;
-  padding-bottom: 2px; }
-
-[pad-top-bottom-sm] {
   padding-top: 4px;
   padding-bottom: 4px; }
 
+[pad-top-bottom-sm] {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
 [pad-top-bottom-md] {
-  padding-top: 6px;
-  padding-bottom: 6px; }
+  padding-top: 12px;
+  padding-bottom: 12px; }
 
 [pad-top-bottom-lg] {
-  padding-top: 10px;
-  padding-bottom: 10px; }
-
-[pad-top-bottom-xl] {
-  padding-top: 16px;
-  padding-bottom: 16px; }
-
-[pad-top-bottom-xxl] {
   padding-top: 20px;
   padding-bottom: 20px; }
 
-[pad-top-bottom-xxxl] {
-  padding-top: 24px;
-  padding-bottom: 24px; }
-
-[pad-top-bottom-xxxxl] {
+[pad-top-bottom-xl] {
   padding-top: 30px;
   padding-bottom: 30px; }
+
+[pad-top-bottom-xxl] {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+[pad-top-bottom-xxxl] {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+[pad-top-bottom-xxxxl] {
+  padding-top: 80px;
+  padding-bottom: 80px; }
 
 [pad-top-bottom-max] {
   padding-top: 600px;
@@ -170,34 +197,34 @@
 
 /* margin sizes */
 [mar-nil] {
-  margin: 0px; }
+  margin: 0px 0px; }
 
 [mar-xs] {
-  margin: 1px; }
+  margin: 2px 4px; }
 
 [mar-sm] {
-  margin: 2px; }
+  margin: 4px 8px; }
 
 [mar-md] {
-  margin: 3px; }
+  margin: 6px 12px; }
 
 [mar-lg] {
-  margin: 5px; }
+  margin: 10px 20px; }
 
 [mar-xl] {
-  margin: 8px; }
+  margin: 15px 30px; }
 
 [mar-xxl] {
-  margin: 10px; }
+  margin: 20px 40px; }
 
 [mar-xxxl] {
-  margin: 12px; }
+  margin: 30px 60px; }
 
 [mar-xxxxl] {
-  margin: 15px; }
+  margin: 40px 80px; }
 
 [mar-max] {
-  margin: 300px; }
+  margin: 300px 600px; }
 
 /* margin side overrides */
 [mar-sides-nil] {
@@ -205,36 +232,36 @@
   margin-right: 0px; }
 
 [mar-sides-xs] {
-  margin-left: 2px;
-  margin-right: 2px; }
-
-[mar-sides-sm] {
   margin-left: 4px;
   margin-right: 4px; }
 
+[mar-sides-sm] {
+  margin-left: 8px;
+  margin-right: 8px; }
+
 [mar-sides-md] {
-  margin-left: 6px;
-  margin-right: 6px; }
+  margin-left: 12px;
+  margin-right: 12px; }
 
 [mar-sides-lg] {
-  margin-left: 10px;
-  margin-right: 10px; }
-
-[mar-sides-xl] {
-  margin-left: 16px;
-  margin-right: 16px; }
-
-[mar-sides-xxl] {
   margin-left: 20px;
   margin-right: 20px; }
 
-[mar-sides-xxxl] {
-  margin-left: 24px;
-  margin-right: 24px; }
-
-[mar-sides-xxxxl] {
+[mar-sides-xl] {
   margin-left: 30px;
   margin-right: 30px; }
+
+[mar-sides-xxl] {
+  margin-left: 40px;
+  margin-right: 40px; }
+
+[mar-sides-xxxl] {
+  margin-left: 60px;
+  margin-right: 60px; }
+
+[mar-sides-xxxxl] {
+  margin-left: 80px;
+  margin-right: 80px; }
 
 [mar-sides-max] {
   margin-left: 600px;
@@ -246,36 +273,36 @@
   margin-bottom: 0px; }
 
 [mar-top-bottom-xs] {
-  margin-top: 2px;
-  margin-bottom: 2px; }
-
-[mar-top-bottom-sm] {
   margin-top: 4px;
   margin-bottom: 4px; }
 
+[mar-top-bottom-sm] {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
 [mar-top-bottom-md] {
-  margin-top: 6px;
-  margin-bottom: 6px; }
+  margin-top: 12px;
+  margin-bottom: 12px; }
 
 [mar-top-bottom-lg] {
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-[mar-top-bottom-xl] {
-  margin-top: 16px;
-  margin-bottom: 16px; }
-
-[mar-top-bottom-xxl] {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-[mar-top-bottom-xxxl] {
-  margin-top: 24px;
-  margin-bottom: 24px; }
-
-[mar-top-bottom-xxxxl] {
+[mar-top-bottom-xl] {
   margin-top: 30px;
   margin-bottom: 30px; }
+
+[mar-top-bottom-xxl] {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
+[mar-top-bottom-xxxl] {
+  margin-top: 60px;
+  margin-bottom: 60px; }
+
+[mar-top-bottom-xxxxl] {
+  margin-top: 80px;
+  margin-bottom: 80px; }
 
 [mar-top-bottom-max] {
   margin-top: 600px;

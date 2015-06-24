@@ -41,6 +41,27 @@ $num-map: (nil: $num-nil,
 
 
 
+/* axis maps
+----------------------------------------------- */
+
+$justify-content-map: ( start: 'flex-start',
+                        end: 'flex-end',
+                        center: 'center',
+                        space-between: 'space-between',
+                        space-around: 'space-around');
+
+$align-items-map: ( start: 'flex-start',
+                    end: 'flex-end',
+                    center: 'center',
+                    stretch: 'stretch',
+                    baseline: 'baseline');
+
+$align-content-map: (   start: 'flex-start',
+                        end: 'flex-end',
+                        center: 'center',
+                        stretch: 'stretch',
+                        space-between: 'space-between',
+                        space-around: 'space-around');
 
 
 
