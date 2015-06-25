@@ -212,7 +212,7 @@
 ----------------------------------------------- */
 @for $g from 0 through 15 {
     @for $s from 0 through 15 {
-       [resize="#{$i} #{$j}"] {
+       [resize="#{$g} #{$s}"] {
             flex-grow: $g;
             flex-shrink: $s;
         } 

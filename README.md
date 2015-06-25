@@ -33,3 +33,4 @@ Currently generating ideas for layouts that adjust with media queries:
   <div>other</div>
 </div>
 ```
+
