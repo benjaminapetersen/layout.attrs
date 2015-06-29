@@ -41,7 +41,8 @@ module.exports = function(grunt) {
               cwd: 'dist/',
               src: ['*.css', '!*.min.css'],
               dest: 'dist/',
-              ext: '.min.css'
+              ext: '.min.css',
+              extDot: 'last' // don't eat my dots!
             }]
           }
         },
