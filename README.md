@@ -8,8 +8,14 @@ layout modules.
 
 ## Usage
 
-In your ntml include the `dist/layout.attrs.css` or `dist.layout.attrs.min.css` file,
+In your html include the `dist/layout.attrs.css` or `dist.layout.attrs.min.css` file,
 or individual modules from the `dist/modules` directory.
+
+Conceptually, these attributes should be used to generate layout for your DOM nodes
+while your own custom classes should be used to provide the theme.  For example,
+something like `<div layotu row reverse class="widget widget-user">...</div>`,
+assuming the classes `widget` and `widget-user` provide the actual look and feel
+for the component being built.  The attributes should describe the layout.
 
 ## A simple example
 
