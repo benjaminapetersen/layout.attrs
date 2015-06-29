@@ -10,12 +10,13 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'dist/modules/flex-layout.css': 'src/flex-layout.scss',
+                    'dist/modules/flex-axis.css': 'src/flex-axis.scss',
                     'dist/modules/flex-resize.css': 'src/flex-resize.scss',
                     'dist/modules/flex-media-query.css': 'src/flex-media-query.scss',
                     'dist/modules/flex-ordering.css': 'src/flex-ordering.scss',
                     'dist/modules/positioning.css': 'src/positioning.scss',
                     'dist/modules/misc.css': 'src/misc.scss',
-                    'dist/layout.attrs.css': 'src/flex-all.scss',
+                    'dist/layout.attrs.css': 'src/flex-all.scss'
                 }
             }
         },
