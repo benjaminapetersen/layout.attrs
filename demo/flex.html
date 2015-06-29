@@ -7,7 +7,7 @@
   <title>Full** Flex Utils Demo</title>
 
   <!-- core stuff to figure out -->
-  <link rel="stylesheet" href="../dist/layout.attrs.css?v=1.0">
+  <link rel="stylesheet" href="../dist/layout.attrs.css?v=1.3">
 
   <style>
   html,
@@ -115,11 +115,18 @@
       <div flex grow="1" outline>flex grow="1"</div>
     </div>
 
-    <h2>Shrink **</h2>
+    <h2>Shrink <h2>
     <div layout outline>
       <div flex shrink="5" outline>flex shrink="5"</div>
       <div flex shrink="7" outline>flex shrink="7"</div>
       <div flex shrink="1" outline>flex shrink="1"</div>
+    </div>
+
+    <h2>Resize <h2>
+    <div layout outline>
+      <div flex resize="5 3" outline>flex resize="5 3"</div>
+      <div flex resize="7 3" outline>flex resize="7 3"</div>
+      <div flex resize="1 7" outline>flex resize="1 7"</div>
     </div>
 
     <h2>Main Axis, Cross Axis, Cross Axis Align*</h2>
@@ -209,6 +216,38 @@
       <div absolute bottom left outline class="box">bl</div>
       <div absolute bottom right outline class="box">br</div>
     </div>
+
+
+    <h2>Basic Media Query - mobile</h2>
+    <div layout row mobile="column" outline>
+      <div outline>1. mobile column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="mobile tablet" outline>3. (mobile, tablet hidden)</div>
+      <div  conceal="mobile" outline>4.</div>
+    </div>
+
+    <div layout row sm="column" outline>
+      <div outline>1. sm column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="sm md" outline>3. (sm, md hidden)</div>
+      <div conceal="sm" outline>4.</div>
+    </div>
+
+    <h2>Basic Media Query - mobile, tablet</h2>
+    <div layout row mobile="column"  tablet="column" outline>
+      <div outline>1. mobile &amp; tablet column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="mobile tablet" outline>3. (mobile, tablet hidden)</div>
+      <div conceal="mobile" outline>4.</div>
+    </div>
+
+    <div layout row sm="column" md="column" outline>
+      <div outline>1. sm &amp; md column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="sm md" outline>3. (sm, md hidden)</div>
+      <div  conceal="sm" outline>4.</div>
+    </div>
+
   </div><!-- /#wrapper -->
 
 </body>

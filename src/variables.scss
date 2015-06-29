@@ -68,5 +68,30 @@ $align-content-map: (   start: 'flex-start',
 
 
 
+/* media queries
+    - currently considering two name options...
+----------------------------------------------- */
+$media-devices: (   mobile: 'max-width: 480px',
+                    tablet: 'max-width: 767px',
+                    laptop: 'min-width: 768px) and (max-width: 979px',
+                    desktop: 'min-width: 1200px');
+
+$media-sizes: (     sm: 'max-width: 480px',
+                    md: 'max-width: 767px',
+                    lg: 'min-width: 768px) and (max-width: 979px',
+                    xl: 'min-width: 1200px');
+
+$media-orientation: column, row;
+
+
+
+
+
+
+
+
+
+
+
 
 
