@@ -1,7 +1,7 @@
 {
-  "name": "snappy",
-  "version": "1.0.0",
-  "description": "An experiment in composable (snappable) css attributes for building UI with flexbox in mind. Inspired by Polymer layout &amp; Angular Material CSS.",
+  "name": "layout.attrs",
+  "version": "0.0.1",
+  "description": "An experiment in composable  css attributes for building UI with flexbox in mind. Inspired by Polymer layout &amp; Angular Material CSS.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
