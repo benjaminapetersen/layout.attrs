@@ -1,0 +1,56 @@
+@import 'variables';
+
+/* ordering of children
+----------------------------------------------- */
+/* order="1|2|3" */
+@for $i from 0 through 15 {
+    [order="#{$i}"] {
+        order: $i;
+    }
+}
+/* alt: first, second.... */
+[first] {
+    order: 1;
+}
+[second] {
+    order: 2;
+}
+[third] {
+    order: 3;
+}
+[fourth] {
+    order: 4;
+}
+[fifth] {
+    order: 5;
+}
+[sixth] {
+    order: 6;
+}
+[seventh] {
+    order: 7;
+}
+[eigth] {
+    order: 8;
+}
+[ninth] {
+    order: 9;
+}
+[tenth] {
+    order: 10;
+}
+[eleven] {
+    order: 11;
+}
+[twelve] {
+    order: 12;
+}
+[thirteen] {
+    order: 13;
+}
+[fourteen] {
+    order: 14;
+}
+[fifteen] {
+    order: 15;
+}

@@ -1,0 +1,30 @@
+@import 'variables';
+
+/*  *Experimental*
+    - mobile, tablet, laptop, desktop?
+----------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    [tablet="column"] {
+        flex-direction: column;
+    }
+    [tablet="row"] {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    [mobile="column"] {
+        flex-direction: column;
+    }
+    [mobile="row"] {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    /* hmmmmm.......   */
+}

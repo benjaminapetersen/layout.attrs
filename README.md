@@ -1,8 +1,8 @@
 Work in progress...
 
 # layout.attrs
-An experiment in composable attributes for building UI with flexbox in mind. 
-Inspired by [Angular Material](https://material.angularjs.org/latest/#/layout/grid) 
+An experiment in composable attributes for building UI with flexbox in mind.
+Inspired by [Angular Material](https://material.angularjs.org/latest/#/layout/grid)
 & [Polymer](https://www.polymer-project.org/0.5/docs/polymer/layout-attrs.html)
 layout modules.
 
@@ -34,3 +34,9 @@ Currently generating ideas for layouts that adjust with media queries:
 </div>
 ```
 
+## See it in action
+
+Reiterated, this is a work in project and likely pretty volatile.  That said,
+there is a demo/flex.html file that can be viewed to see a number of the features
+in action.  Suggested `python -m SimpleHTTPServer` or some other file server run
+from the root directory.

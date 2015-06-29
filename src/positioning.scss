@@ -1,0 +1,29 @@
+/* display alternates
+----------------------------------------------- */
+[block] {
+    display: block;
+}
+[inline] {
+    display: inline-block;
+}
+
+/* positioning alternates
+----------------------------------------------- */
+[absolute] {
+    position: absolute;
+}
+[relative] {
+    position: relative;
+}
+[top] {
+    top: 0px;
+}
+[bottom] {
+    bottom: 0px;
+}
+[left] {
+    left: 0px;
+}
+[right] {
+    right: 0px;
+}
