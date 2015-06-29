@@ -1,0 +1,65 @@
+/*
+    - generates values in ems based on px sizes
+    - $base-font variable in variables.scss can change scale
+    - defaults to 14 if $base-font is not defined
+*/
+@function em($val) {
+    @if variable-exists(base-font) {
+        @return ($val / $base-font ) * 1em;
+    }@else {
+        @return ($val / 14 ) * 1em;
+    }
+}
+
+// turns 100 into 100px
+@function px($val) {
+    @return #{$val}px;
+}
+
+
+
+// percent-of(100px, 1000px) -> 10%
+@function percent-of($in, $out) {
+    @return ($in / $out) * 100%;
+}
+
+
+
+/*
+    handy functions borrowed from hugo
+    http://hugogiraudel.com/2013/08/12/sass-functions/
+*/
+// turns 100px into 100
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+// ensure number is between two values:
+// clamp($val, 10, 100) -> if $val is 101, will return 100
+// percentage(clamp($value, 0, 100) -> return as a %
+@function clamp($value, $min, $max) {
+  @return if($value > $max, $max, if($value < $min, $min, $value));
+}
+
+/* http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/ */
+@function first($list) {
+  @return nth($list, 1);
+}
+
+@function last($list) {
+  @return nth($list, length($list));
+}
+
+@function last-index($list, $value) {
+  @for $i from length($list)*-1 through -1 {
+    @if nth($list, abs($i)) == $value {
+      @return abs($i);
+    }
+  }
+
+  @return null;
+}
+
+@function prepend($list, $value) {
+    @return join($value, $list);
+}
