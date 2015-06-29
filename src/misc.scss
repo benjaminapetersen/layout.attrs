@@ -1,0 +1,56 @@
+@import 'variables';
+
+/*
+    if you hide something, you really want it hidden!
+    - todo:
+       - generate attr, data-attr, class
+*/
+[hide] {
+    display: none !important;
+}
+
+
+/* various outlines
+----------------------------------------------- */
+[outline],
+[outline="red"]{
+    outline: 1px solid #990000;
+}
+[outline="333"] {
+    outline: 1px solid #333;
+}
+[outline="666"] {
+    outline: 1px solid #666;
+}
+[outline="999"] {
+    outline: 1px solid #999;
+}
+
+/* attrs describing functionality
+----------------------------------------------- */
+[height-max] {
+    height: 100%;
+}
+
+[overflow-hidden] {
+    overflow: hidden;
+}
+
+[scrollable] {
+    overflow: scroll;
+}
+
+[truncate] {
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+[break-word] {
+  word-break: break-all; // Firefox
+  word-break: break-word; // Webkit and Microsoft
+}
+
+[nowrap] {
+  white-space: nowrap;
+}

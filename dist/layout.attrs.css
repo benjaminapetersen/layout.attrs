@@ -1,5 +1,15 @@
 /* axis maps
 ----------------------------------------------- */
+/*
+    - generates values in ems based on px sizes
+    - $base-font variable in variables.scss can change scale
+    - defaults to 14 if $base-font is not defined
+*/
+/*
+    handy functions borrowed from hugo
+    http://hugogiraudel.com/2013/08/12/sass-functions/
+*/
+/* http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/ */
 /* axis maps
 ----------------------------------------------- */
 /*
@@ -4457,6 +4467,53 @@
   -webkit-flex-shrink: 15;
       -ms-flex-negative: 15;
           flex-shrink: 15; }
+
+/* axis maps
+----------------------------------------------- */
+/*
+    if you hide something, you really want it hidden!
+    - todo:
+       - generate attr, data-attr, class
+*/
+[hide] {
+  display: none !important; }
+
+/* various outlines
+----------------------------------------------- */
+[outline], [outline="red"] {
+  outline: 1px solid #990000; }
+
+[outline="333"] {
+  outline: 1px solid #333; }
+
+[outline="666"] {
+  outline: 1px solid #666; }
+
+[outline="999"] {
+  outline: 1px solid #999; }
+
+/* attrs describing functionality
+----------------------------------------------- */
+[height-max] {
+  height: 100%; }
+
+[overflow-hidden] {
+  overflow: hidden; }
+
+[scrollable] {
+  overflow: scroll; }
+
+[truncate] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+[break-word] {
+  word-break: break-all;
+  word-break: break-word; }
+
+[nowrap] {
+  white-space: nowrap; }
 
 /* display alternates
 ----------------------------------------------- */

@@ -14,6 +14,7 @@ module.exports = function(grunt) {
                      //'dist/flex-media-queries.css': 'src/flex-media-queries.scss',
                     'dist/modules/flex-ordering.css': 'src/flex-ordering.scss',
                     'dist/modules/positioning.css': 'src/positioning.scss',
+                    'dist/modules/misc.css': 'src/misc.scss',
                     'dist/layout.attrs.css': 'src/flex-all.scss',
                 }
             }
