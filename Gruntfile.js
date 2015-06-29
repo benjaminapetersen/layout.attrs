@@ -16,6 +16,11 @@ module.exports = function(grunt) {
                     'dist/modules/positioning.css': 'src/positioning.scss',
                     'dist/modules/misc.css': 'src/misc.scss',
                     'dist/layout.attrs.css': 'src/flex-all.scss',
+                    // experimental
+                    'dist/modules/typography.css': 'src/typography.scss',
+                    'dist/modules/social.css': 'src/social.scss',
+                    'dist/modules/palettes.css': 'src/palettes.scss',
+
                 }
             }
         },
@@ -41,7 +46,8 @@ module.exports = function(grunt) {
               cwd: 'dist/',
               src: ['*.css', '!*.min.css'],
               dest: 'dist/',
-              ext: '.min.css'
+              ext: '.min.css',
+              extDot: 'last' // don't eat my dots!
             }]
           }
         },

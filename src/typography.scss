@@ -1,0 +1,8 @@
+@import 'variables';
+
+// Generate basic heading sizes
+@each $header, $size in (h1: 2.4, h2: 2, h3: 1.8, h4: 1.4, h5: 1) {
+  #{$header} {
+    font-size: em($num-xxxxl * $size);
+  }
+}
