@@ -1,0 +1,91 @@
+/* axis maps
+----------------------------------------------- */
+.shadow-nil {
+  box-shadow: 0px 0px 0px 0px #9c9c9c; }
+
+.shadow-offset-nil {
+  box-shadow: 0px 0px 0px 0px #9c9c9c; }
+
+.shadow-xs {
+  box-shadow: 0px 0px 2px 2px #9c9c9c; }
+
+.shadow-offset-xs {
+  box-shadow: 2px 2px 0px 0px #9c9c9c; }
+
+.shadow-sm {
+  box-shadow: 0px 0px 4px 4px #9c9c9c; }
+
+.shadow-offset-sm {
+  box-shadow: 4px 4px 0px 0px #9c9c9c; }
+
+.shadow-md {
+  box-shadow: 0px 0px 6px 6px #9c9c9c; }
+
+.shadow-offset-md {
+  box-shadow: 6px 6px 0px 0px #9c9c9c; }
+
+.shadow-lg {
+  box-shadow: 0px 0px 10px 10px #9c9c9c; }
+
+.shadow-offset-lg {
+  box-shadow: 10px 10px 0px 0px #9c9c9c; }
+
+.shadow-xl {
+  box-shadow: 0px 0px 15px 15px #9c9c9c; }
+
+.shadow-offset-xl {
+  box-shadow: 15px 15px 0px 0px #9c9c9c; }
+
+.shadow-xxl {
+  box-shadow: 0px 0px 20px 20px #9c9c9c; }
+
+.shadow-offset-xxl {
+  box-shadow: 20px 20px 0px 0px #9c9c9c; }
+
+.shadow-xxxl {
+  box-shadow: 0px 0px 30px 30px #9c9c9c; }
+
+.shadow-offset-xxxl {
+  box-shadow: 30px 30px 0px 0px #9c9c9c; }
+
+.shadow-xxxxl {
+  box-shadow: 0px 0px 40px 40px #9c9c9c; }
+
+.shadow-offset-xxxxl {
+  box-shadow: 40px 40px 0px 0px #9c9c9c; }
+
+.shadow-max {
+  box-shadow: 0px 0px 300px 300px #9c9c9c; }
+
+.shadow-offset-max {
+  box-shadow: 300px 300px 0px 0px #9c9c9c; }
+
+.round-nil {
+  border-radius: 0px; }
+
+.round-xs {
+  border-radius: 2px; }
+
+.round-sm {
+  border-radius: 4px; }
+
+.round-md {
+  border-radius: 6px; }
+
+.round-lg {
+  border-radius: 10px; }
+
+.round-xl {
+  border-radius: 15px; }
+
+.round-xxl {
+  border-radius: 20px; }
+
+.round-xxxl {
+  border-radius: 30px; }
+
+.round-xxxxl {
+  border-radius: 40px; }
+
+.round-max {
+  border-radius: 300px; }

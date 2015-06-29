@@ -15,6 +15,9 @@ module.exports = function(grunt) {
                     'dist/modules/flex-ordering.css': 'src/flex-ordering.scss',
                     'dist/modules/positioning.css': 'src/positioning.scss',
                     'dist/layout.attrs.css': 'src/flex-all.scss',
+                    // experimental
+                    'dist/modules/class-shadow-round.css': 'src/class-shadow-round.scss',
+                    'dist/modules/attr-shadow-round.css': 'src/attr-shadow-round.scss',
                 }
             }
         },
