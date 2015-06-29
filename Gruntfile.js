@@ -15,6 +15,9 @@ module.exports = function(grunt) {
                     'dist/modules/flex-ordering.css': 'src/flex-ordering.scss',
                     'dist/modules/positioning.css': 'src/positioning.scss',
                     'dist/layout.attrs.css': 'src/flex-all.scss',
+                    // experimental
+                    'dist/modules/attr-padding-margin.css': 'src/attr-padding-margin.scss',
+                    'dist/modules/class-padding-margin.css': 'src/class-padding-margin.scss'
                 }
             }
         },
