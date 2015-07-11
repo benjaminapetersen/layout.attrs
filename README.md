@@ -1,5 +1,3 @@
-Work in progress...
-
 # layout.attrs
 An experiment in composable attributes for building UI with flexbox.
 Inspired by [Angular Material](https://material.angularjs.org/latest/#/layout/grid)
