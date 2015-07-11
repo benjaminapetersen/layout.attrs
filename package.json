@@ -1,21 +1,21 @@
 {
   "name": "layout.attrs",
-  "version": "0.0.1",
-  "description": "An experiment in composable  css attributes for building UI with flexbox in mind. Inspired by Polymer layout &amp; Angular Material CSS.",
+  "version": "1.0.0",
+  "description": "An experiment in composable  css attributes for building UI with flexbox in mind. Inspired by Polymer layout &amp; Angular Material.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/benjaminapetersen/snappy.git"
+    "url": "https://github.com/benjaminapetersen/layout.attrs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/benjaminapetersen/snappy/issues"
+    "url": "https://github.com/benjaminapetersen/layout.attrs/issues"
   },
-  "homepage": "https://github.com/benjaminapetersen/snappy",
+  "homepage": "https://github.com/benjaminapetersen/layout.attrs",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "cssnano": "^2.0.0",
