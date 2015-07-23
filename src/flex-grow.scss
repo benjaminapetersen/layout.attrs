@@ -1,0 +1,9 @@
+@import 'variables';
+
+/* flex grow
+----------------------------------------------- */
+@for $i from 0 through 12 {
+    [grow="#{$i}"] {
+        flex-grow: $i;
+    }
+}
