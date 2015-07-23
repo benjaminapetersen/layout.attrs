@@ -3,6 +3,9 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
+        clean: {
+            dist: ['./dist']
+        },
         sass: {
             options: {
                 sourceMap: false
@@ -33,7 +36,6 @@ module.exports = function(grunt) {
             all : {
                 src: 'dist/**/*.css'
             }
-
         },
         cssmin: {
           target: {
@@ -64,6 +66,6 @@ module.exports = function(grunt) {
     // 2. autoprefix those files
     // 3. minify those files
     // - provide output at each level rather than overwriting
-    grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['clean','sass', 'autoprefixer', 'cssmin']);
 
 };

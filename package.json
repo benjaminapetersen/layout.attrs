@@ -20,6 +20,7 @@
     "autoprefixer-core": "^5.2.1",
     "cssnano": "^2.0.0",
     "grunt-autoprefixer": "^3.0.3",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-cssmin": "^0.12.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-postcss": "^0.5.4",
