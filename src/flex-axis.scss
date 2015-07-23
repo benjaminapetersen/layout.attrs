@@ -1,5 +1,17 @@
 @import 'variables';
 
+/* self, for overriding the parent settings (below)
+    - experimental, 2 possible ways to do syntax:
+        div self-center
+        or:
+        self="center"
+----------------------------------------------- */
+@each $key, $val in $align-items-map {
+    [self-#{$key}],
+    [self="#{$key}"] {
+        align-self: #{$val};
+    }
+}
 
 /* main axis only
 ----------------------------------------------- */
@@ -25,35 +37,5 @@
 @each $key, $val in $align-content-map {
     [cross-axis-align="#{$key}"] {
         align-content: #{$val};
-    }
-}
-
-/* EXPERIMENTAL
-   align="x y z" shorthand
-   - TODO: how to match only two out of three?
-   - point is ease of use, without generating
-     way too much CSS to be worth it.
-     <div flex axis="center center">
-     <div flex axis="center center center">
------------------------------------------------ */
-/* primary two xis */
-@each $jc-key, $jc-val in $justify-content-map {
-    @each $ai-key, $ai-val in $align-items-map {
-        [axis="#{$jc-key} #{$ai-key}"] {
-            justify-content: #{$jc-val};
-            align-items: #{$ai-val};
-        }
-    }
-}
-/* all three */
-@each $jc-key, $jc-val in $justify-content-map {
-    @each $ai-key, $ai-val in $align-items-map {
-        @each $ac-key, $ac-val in $align-content-map {
-            [axis="#{$jc-key} #{$ai-key} #{$ac-key}"] {
-                justify-content: #{$jc-val};
-                align-items: #{$ai-val};
-                align-content: #{$ac-val};
-            }
-        }
     }
 }

@@ -6,6 +6,9 @@
   ],
   "description": "A directive providing an api to other directives for knowing when the bounding box (parent) changes size",
   "license": "MIT",
+  "main": [
+    "dist/layout.attrs.min.css",
+  ],
   "ignore": [
     "**/.*",
     "node_modules",

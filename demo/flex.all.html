@@ -1,0 +1,276 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Full** Flex Utils Demo</title>
+
+  <!-- core stuff to figure out -->
+  <link rel="stylesheet" href="../dist/layout.attrs.css?v=1.3">
+  <link rel="stylesheet" href="../dist/modules/flex-resize.css?v=1.3">
+  <link rel="stylesheet" href="../dist/modules/flex-axis-shorthand.css?v=1.3">
+
+  <style>
+  html,
+  body {
+    font-size: 11px;
+  }
+  #wrapper {
+    min-width: 400px;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div {
+    margin: 6px;
+    padding: 6px;
+  }
+  .box {
+    height: 20px;
+    width: 20px;
+  }
+  .box.wide {
+    width: 200px;
+  }
+  [outline] {
+    outline: 1px solid #F0D2D2;
+  }
+  </style>
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <h1>Flex Utils</h1>
+
+    <p>Brief, simple examples of the various rules.  This is
+       not exhaustive documentation, just a sampling to verify
+       that the attrs work as intended. :)</p>
+
+    <h2>Basic Layout, Flex</h2>
+    <div layout outline>
+      <div flex outline>flex</div>
+      <div flex outline>flex</div>
+      <div outline>no flex</div>
+    </div>
+
+    <h2>Layout Row, Column</h2>
+    <div layout row outline>
+      <div flex outline>flex</div>
+      <div flex layout column outline style="height: 90px">
+        <div outline>no flex</div>
+        <div flex outline>flex</div>
+      </div>
+      <div outline>no flex</div>
+    </div>
+
+    <h2>Reverse Row</h2>
+    <div layout row reverse outline>
+      <div outline>1.</div>
+      <div outline>2.</div>
+      <div outline>3.</div>
+    </div>
+
+    <h2>Reverse Column</h2>
+    <div layout column reverse outline>
+      <div outline>1.</div>
+      <div outline>2.</div>
+      <div outline>3.</div>
+    </div>
+
+    <h2>Wrap (Reversed)</h2>
+    <div layout row wrap reverse outline>
+      <div outline class="box wide">box 1</div>
+      <div outline class="box">box 2</div>
+      <div outline class="box wide">box 3</div>
+      <div outline class="box">box 4</div>
+      <div outline class="box wide">box 5</div>
+      <div outline class="box">box 6</div>
+      <div outline class="box wide">box 7</div>
+      <div outline class="box">box 8</div>
+      <div outline class="box wide">box 9</div>
+    </div>
+
+    <h2>Fit</h2>
+    <div layout row wrap outline style="height: 120px">
+      <div fit outline>fit... weird with all div mar/pad</div>
+    </div>
+
+    <h2>Order</h2>
+    <div layout row outline>
+      <div order="3" outline>1.</div>
+      <div order="1" outline>2.</div>
+      <div order="2" outline>3.</div>
+    </div>
+
+    <div layout row outline>
+      <div third outline>first</div>
+      <div first outline>second</div>
+      <div second outline>third</div>
+    </div>
+
+    <h2>Grow</h2>
+    <div layout outline>
+      <div flex grow="5" outline>flex grow="5"</div>
+      <div flex grow="7" outline>flex grow="7"</div>
+      <div flex grow="1" outline>flex grow="1"</div>
+    </div>
+
+    <h2>Shrink </h2>
+    <div layout outline>
+      <div flex shrink="5" outline>flex shrink="5"</div>
+      <div flex shrink="7" outline>flex shrink="7"</div>
+      <div flex shrink="1" outline>flex shrink="1"</div>
+    </div>
+
+    <h2>Resize (non-standard build)<h2>
+    <div layout outline>
+      <div flex resize="5 3" outline>flex resize="5 3"</div>
+      <div flex resize="7 3" outline>flex resize="7 3"</div>
+      <div flex resize="1 7" outline>flex resize="1 7"</div>
+    </div>
+
+    <h2>Main Axis, Cross Axis, Cross Axis Align*</h2>
+    <!--
+      - not sure that all three props are intended to be used together
+      - the second example illustrates this, changing the props
+        seems to only work for 2 out of 3
+      - cross-axis-align is only useful when there are multiple
+        lines of content
+    -->
+    <div layout row
+      main-axis="space-between"
+      cross-axis="end"
+      cross-axis-align="center"
+      outline style="height: 250px;">
+      <div outline>1.</div>
+      <div outline>2.</div>
+      <div outline>3.</div>
+    </div>
+
+    <div
+      layout
+      main-axis="start"
+      cross-axis="start"
+      cross-axis-align="center"
+      outline style="height: 250px;"
+      wrap>
+      <div outline style="width: 300px;">1.</div>
+      <div outline style="width: 500px;">2.</div>
+      <div outline style="width: 300px;">3.</div>
+      <div outline style="width: 300px;">1.</div>
+      <div outline style="width: 500px;">2.</div>
+      <div outline style="width: 300px;">3.</div>
+    </div>
+
+    <h2>Axis shorthand (non-standard build)</h2>
+      <div layout row
+        axis="space-between end center"
+        outline style="height: 250px;">
+        <div outline>1.</div>
+        <div outline>2.</div>
+        <div outline>3.</div>
+      </div>
+     <div
+      layout
+      axis="start start center"
+      outline style="height: 250px;"
+      wrap>
+      <div outline style="width: 300px;">1.</div>
+      <div outline style="width: 500px;">2.</div>
+      <div outline style="width: 300px;">3.</div>
+      <div outline style="width: 300px;">1.</div>
+      <div outline style="width: 500px;">2.</div>
+      <div outline style="width: 300px;">3.</div>
+    </div>
+
+    <h1>Other Utils</h1>
+
+    <h2>Padding, Margin Utils</h2>
+    <div layout row outline>
+      <div pad-sm outline>1.</div>
+      <div pad-md outline>2.</div>
+      <div pad-lg outline>3.</div>
+      <div pad-xl outline>4.</div>
+      <div pad-xxl outline>5.</div>
+      <div pad-xxxl outline>6.</div>
+      <div pad-xxxxl outline>7.</div>
+    </div>
+    <div layout row outline>
+      <div mar-sm outline>1.</div>
+      <div mar-md outline>2.</div>
+      <div mar-lg outline>3.</div>
+      <div mar-xl outline>4.</div>
+      <div mar-xxl outline>5.</div>
+      <div mar-xxxl outline>6.</div>
+      <div mar-xxxxl outline>7.</div>
+    </div>
+    <h4>Padding, Margin Utils With Shrink, Grow, Resize</h4>
+    <!--
+      - shrink works to a point. it won't override the
+        margin/padding, but it will handle extra space.
+    -->
+    <div layout row outline>
+      <div flex pad-sm shrink="1" grow="1" outline>1.</div>
+      <div flex pad-md shrink="1" grow="1" outline>2.</div>
+      <div flex pad-lg shrink="1" grow="2" outline>3.</div>
+      <div flex pad-xl shrink="1" grow="2" outline>4.</div>
+      <div flex pad-xxl shrink="1" grow="3" outline>5.</div>
+      <div flex pad-xxxl shrink="1" grow="4" outline>6.</div>
+      <div flex pad-xxxxl shrink="1" grow="7" outline>7.</div>
+    </div>
+    <div layout row outline>
+      <div flex mar-sm shrink="1" outline>1.</div>
+      <div flex mar-md shrink="1" outline>2.</div>
+      <div flex mar-lg shrink="1" outline>3.</div>
+      <div flex mar-xl shrink="1" outline>4.</div>
+      <div flex mar-xxl shrink="1" outline>5.</div>
+      <div flex mar-xxxl shrink="1" outline>6.</div>
+      <div flex mar-xxxxl shrink="1" outline>7.</div>
+    </div>
+
+    <h2>Relative, Absolute Positioning</h2>
+
+    <div relative outline style="width: 200px; height: 80px">
+      <div absolute top left outline round-max class="box">tl</div>
+      <div absolute top right outline round-max class="box">tr</div>
+      <div absolute bottom left outline class="box">bl</div>
+      <div absolute bottom right outline class="box">br</div>
+    </div>
+
+
+    <h2>Basic Media Query - mobile</h2>
+    <div layout row mobile="column" outline>
+      <div outline>1. mobile column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="mobile tablet" outline>3. (mobile, tablet hidden)</div>
+      <div  conceal="mobile" outline>4.</div>
+    </div>
+
+    <div layout row sm="column" outline>
+      <div outline>1. sm column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="sm md" outline>3. (sm, md hidden)</div>
+      <div conceal="sm" outline>4.</div>
+    </div>
+
+    <h2>Basic Media Query - mobile, tablet</h2>
+    <div layout row mobile="column"  tablet="column" outline>
+      <div outline>1. mobile &amp; tablet column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="mobile tablet" outline>3. (mobile, tablet hidden)</div>
+      <div conceal="mobile" outline>4.</div>
+    </div>
+
+    <div layout row sm="column" md="column" outline>
+      <div outline>1. sm &amp; md column,</div>
+      <div flex outline>2. other views row</div>
+      <div conceal="sm md" outline>3. (sm, md hidden)</div>
+      <div  conceal="sm" outline>4.</div>
+    </div>
+
+  </div><!-- /#wrapper -->
+
+</body>
+</html>
