@@ -1,11 +1,14 @@
 {
   "name": "layout.attrs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     "benjaminapetersen <admin@benjaminapetersen.me>"
   ],
   "description": "A directive providing an api to other directives for knowing when the bounding box (parent) changes size",
   "license": "MIT",
+  "main": [
+    "dist/layout.attrs.min.css",
+  ],
   "ignore": [
     "**/.*",
     "node_modules",

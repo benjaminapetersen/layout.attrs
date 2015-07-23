@@ -8,8 +8,13 @@
 @import 'flex-ordering';
 @import 'flex-axis';
 @import 'flex-media-query';
-@import 'flex-resize';
+@import 'flex-shrink';
+@import 'flex-grow';
 @import 'misc';
+
+// NOT included to avoid file bloat for the average project:
+// @import 'flex-resize';
+// @import 'flex-axis-shorthand';
 
 // non-flex but still handy
 @import 'positioning';

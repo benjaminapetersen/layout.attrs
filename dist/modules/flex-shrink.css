@@ -1,0 +1,71 @@
+/* axis maps
+----------------------------------------------- */
+/* media queries
+    - currently considering two name options...
+----------------------------------------------- */
+/* flex shrink
+----------------------------------------------- */
+[shrink="0"] {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+
+[shrink="1"] {
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1; }
+
+[shrink="2"] {
+  -webkit-flex-shrink: 2;
+      -ms-flex-negative: 2;
+          flex-shrink: 2; }
+
+[shrink="3"] {
+  -webkit-flex-shrink: 3;
+      -ms-flex-negative: 3;
+          flex-shrink: 3; }
+
+[shrink="4"] {
+  -webkit-flex-shrink: 4;
+      -ms-flex-negative: 4;
+          flex-shrink: 4; }
+
+[shrink="5"] {
+  -webkit-flex-shrink: 5;
+      -ms-flex-negative: 5;
+          flex-shrink: 5; }
+
+[shrink="6"] {
+  -webkit-flex-shrink: 6;
+      -ms-flex-negative: 6;
+          flex-shrink: 6; }
+
+[shrink="7"] {
+  -webkit-flex-shrink: 7;
+      -ms-flex-negative: 7;
+          flex-shrink: 7; }
+
+[shrink="8"] {
+  -webkit-flex-shrink: 8;
+      -ms-flex-negative: 8;
+          flex-shrink: 8; }
+
+[shrink="9"] {
+  -webkit-flex-shrink: 9;
+      -ms-flex-negative: 9;
+          flex-shrink: 9; }
+
+[shrink="10"] {
+  -webkit-flex-shrink: 10;
+      -ms-flex-negative: 10;
+          flex-shrink: 10; }
+
+[shrink="11"] {
+  -webkit-flex-shrink: 11;
+      -ms-flex-negative: 11;
+          flex-shrink: 11; }
+
+[shrink="12"] {
+  -webkit-flex-shrink: 12;
+      -ms-flex-negative: 12;
+          flex-shrink: 12; }

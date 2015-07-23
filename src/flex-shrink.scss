@@ -1,0 +1,9 @@
+@import 'variables';
+
+/* flex shrink
+----------------------------------------------- */
+@for $i from 0 through 12 {
+    [shrink="#{$i}"] {
+        flex-shrink: $i;
+    }
+}

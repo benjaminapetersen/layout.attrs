@@ -40,7 +40,13 @@
 
   <div id="wrapper">
 
-    <h1>Flex Utils</h1>
+    <h1>layout.attrs default</h1>
+
+    <p>
+      Does <strong>not include</strong> the resize or axis modules.
+      See <a href="./flex.all.html">the full demo</a> file for these
+      additional modules.
+    </p>
 
     <p>Brief, simple examples of the various rules.  This is
        not exhaustive documentation, just a sampling to verify
@@ -115,21 +121,14 @@
       <div flex grow="1" outline>flex grow="1"</div>
     </div>
 
-    <h2>Shrink <h2>
+    <h2>Shrink </h2>
     <div layout outline>
       <div flex shrink="5" outline>flex shrink="5"</div>
       <div flex shrink="7" outline>flex shrink="7"</div>
       <div flex shrink="1" outline>flex shrink="1"</div>
     </div>
 
-    <h2>Resize <h2>
-    <div layout outline>
-      <div flex resize="5 3" outline>flex resize="5 3"</div>
-      <div flex resize="7 3" outline>flex resize="7 3"</div>
-      <div flex resize="1 7" outline>flex resize="1 7"</div>
-    </div>
-
-    <h2>Main Axis, Cross Axis, Cross Axis Align*</h2>
+    <h2>Main Axis, Cross Axis, Cross Axis Align w/self-center</h2>
     <!--
       - not sure that all three props are intended to be used together
       - the second example illustrates this, changing the props
@@ -142,7 +141,7 @@
       cross-axis="end"
       cross-axis-align="center"
       outline style="height: 250px;">
-      <div outline>1.</div>
+      <div outline self-center>1. <!-- can also self="center" syntax --></div>
       <div outline>2.</div>
       <div outline>3.</div>
     </div>
