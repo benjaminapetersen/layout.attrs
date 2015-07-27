@@ -1,6 +1,6 @@
 {
   "name": "layout.attrs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "authors": [
     "benjaminapetersen <admin@benjaminapetersen.me>"
   ],
@@ -10,7 +10,6 @@
     "dist/layout.attrs.min.css"
   ],
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "test",
