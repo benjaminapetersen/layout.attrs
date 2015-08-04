@@ -36,6 +36,7 @@
 ----------------------------------------------- */
 
 /* flex container */
+/* @deprecated, 'layout' is superfluous, just use 'column' or 'row' */
 [layout] {
     display: flex;
 }
@@ -53,8 +54,10 @@
 }
 
 /* flex-direction is handled in these attrs */
-[column] {
+[column],
+[layout="column"] {
     flex-direction: column;
+    display: flex;
 }
 
 [column="reverse"],
@@ -62,8 +65,10 @@
     flex-direction: column-reverse;
 }
 
-[row] {
+[row],
+[layout="row"] {
     flex-direction: row;
+    display: flex;
 }
 
 [row="reverse"],
