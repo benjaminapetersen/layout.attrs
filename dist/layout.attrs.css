@@ -52,6 +52,7 @@
 /* basic flex attrs
 ----------------------------------------------- */
 /* flex container */
+/* @deprecated, 'layout' is superfluous, just use 'column' or 'row' */
 [layout] {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,20 +72,26 @@
           flex-basis: auto; }
 
 /* flex-direction is handled in these attrs */
-[column] {
+[column], [layout="column"] {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 [column="reverse"], [column][reverse] {
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse; }
 
-[row] {
+[row], [layout="row"] {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 [row="reverse"], [row][reverse] {
   -webkit-flex-direction: row-reverse;
