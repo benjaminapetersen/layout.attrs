@@ -59,17 +59,32 @@
   display: flex; }
 
 /* primary flex child*/
-[flex] {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+/* Set to explict values for flex-grow, flex-shrink and flex-basis, so browsers have correct values by default. https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed */
+[flex="1"] {
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%; }
 
-/* this is useless right now,
-    but a reminder to look at it later */
-[basis], [basis="auto"] {
+[flex], [flex="auto"] {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
+[flex="initial"] {
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
+
+/* flex-basis - if set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value. http://www.w3.org/TR/css3-flexbox/images/rel-vs-abs-flex.svg */
+[basis="auto"] {
   -webkit-flex-basis: auto;
       -ms-flex-preferred-size: auto;
           flex-basis: auto; }
+
+[basis="0%"] {
+  -webkit-flex-basis: 0%;
+      -ms-flex-preferred-size: 0%;
+          flex-basis: 0%; }
 
 /* flex-direction is handled in these attrs */
 [column], [layout="column"] {
