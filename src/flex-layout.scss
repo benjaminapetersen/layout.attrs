@@ -42,15 +42,29 @@
 }
 
 /* primary flex child*/
-[flex] {
-    flex: 1;
+/* Set to explict values for flex-grow, flex-shrink and flex-basis, so browsers have correct values by default. https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed */
+
+[flex="1"] {
+    flex: 1 1 0%; // 0% flex-basis causes IE 10/11 issues https://connect.microsoft.com/IE/feedback/details/802625/min-height-and-flexbox-flex-direction-column-dont-work-together-in-ie-10-11-preview
 }
 
-/* this is useless right now,
-    but a reminder to look at it later */
-[basis],
+[flex],
+[flex="auto"] {
+    flex: 1 1 auto;
+}
+
+[flex="initial"] {
+    flex: 0 1 auto;
+}
+
+/* flex-basis - if set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value. http://www.w3.org/TR/css3-flexbox/images/rel-vs-abs-flex.svg */
+
 [basis="auto"] {
     flex-basis: auto;
+}
+
+[basis="0%"] {
+    flex-basis: 0%;
 }
 
 /* flex-direction is handled in these attrs */
