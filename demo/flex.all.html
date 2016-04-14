@@ -14,10 +14,16 @@
   <style>
   html,
   body {
-    font-size: 11px;
+    font-size: 12px;
+    font-family: sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  h2, h3 {
+    margin-top: 2em;
   }
   #wrapper {
-    min-width: 400px;
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
@@ -34,7 +40,7 @@
     width: 200px;
   }
   [outline] {
-    outline: 1px solid #F0D2D2;
+    outline-color: #999;
   }
   </style>
 </head>
@@ -47,13 +53,17 @@
     <p>Brief, simple examples of the various rules.  This is
        not exhaustive documentation, just a sampling to verify
        that the attrs work as intended. :)</p>
-
-    <h2>Basic Layout, Flex</h2>
-    <div layout outline>
-      <div flex outline>flex</div>
-      <div flex outline>flex</div>
-      <div outline>no flex</div>
-    </div>
+       
+   <h2>Basic Layout</h2>
+   <h3>flex (1 1 0%)</h3>
+   <div layout outline>
+     <div flex outline>flex - Lorem ipsum dolor sit amet, ea sea decore, at quis mutat bonorum eam, te autem oratio inciderint eam.</div>
+     <div flex outline>flex</div>
+   </div>
+   <div layout outline>
+     <div flex outline>flex</div>
+     <div flex outline>flex</div>
+   </div>
 
     <h2>Layout Row, Column</h2>
     <div layout row outline>
@@ -124,7 +134,7 @@
       <div flex shrink="1" outline>flex shrink="1"</div>
     </div>
 
-    <h2>Resize (non-standard build)<h2>
+    <h2>Resize (non-standard build)</h2>
     <div layout outline>
       <div flex resize="5 3" outline>flex resize="5 3"</div>
       <div flex resize="7 3" outline>flex resize="7 3"</div>
@@ -206,7 +216,7 @@
       <div mar-xxxl outline>6.</div>
       <div mar-xxxxl outline>7.</div>
     </div>
-    <h4>Padding, Margin Utils With Shrink, Grow, Resize</h4>
+    <h2>Padding, Margin Utils With Shrink, Grow, Resize</h2>
     <!--
       - shrink works to a point. it won't override the
         margin/padding, but it will handle extra space.
