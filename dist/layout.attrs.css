@@ -76,7 +76,8 @@
       -ms-flex-preferred-size: 0%;
           flex-basis: 0%; }
 
-[column], [layout="column"] {
+[column],
+[layout="column"] {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -84,12 +85,14 @@
   display: -ms-flexbox;
   display: flex; }
 
-[column="reverse"], [column][reverse] {
+[column="reverse"],
+[column][reverse] {
   -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse; }
 
-[row], [layout="row"] {
+[row],
+[layout="row"] {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
@@ -97,7 +100,8 @@
   display: -ms-flexbox;
   display: flex; }
 
-[row="inline"] {
+[row="inline"],
+[row][inline] {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
@@ -105,7 +109,8 @@
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
-[column="inline"] {
+[column="inline"],
+[column][inline] {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -113,7 +118,8 @@
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
-[row="reverse"], [row][reverse] {
+[row="reverse"],
+[row][reverse] {
   -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse; }
@@ -318,27 +324,32 @@
         or:
         self="center"
 ----------------------------------------------- */
-[self-start], [self="start"] {
+[self-start],
+[self="start"] {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start; }
 
-[self-end], [self="end"] {
+[self-end],
+[self="end"] {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end; }
 
-[self-center], [self="center"] {
+[self-center],
+[self="center"] {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center; }
 
-[self-stretch], [self="stretch"] {
+[self-stretch],
+[self="stretch"] {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch; }
 
-[self-baseline], [self="baseline"] {
+[self-baseline],
+[self="baseline"] {
   -webkit-align-self: baseline;
       -ms-flex-item-align: baseline;
           align-self: baseline; }
@@ -715,7 +726,8 @@
 
 /* various outlines
 ----------------------------------------------- */
-[outline], [outline="red"] {
+[outline],
+[outline="red"] {
   outline: 1px solid #990000; }
 
 [outline="333"] {

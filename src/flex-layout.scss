@@ -81,12 +81,14 @@
 }
 
 // The element behaves like an inline element and lays out its content according to the flexbox model. flex-direction is handled
-[row="inline"] {
+[row="inline"],
+[row][inline] {
     flex-direction: row;
     display: inline-flex;
 }
 
-[column="inline"]{
+[column="inline"],
+[column][inline] {
     flex-direction: column;
     display: inline-flex;
 }

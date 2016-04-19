@@ -9,27 +9,32 @@
         or:
         self="center"
 ----------------------------------------------- */
-[self-start], [self="start"] {
+[self-start],
+[self="start"] {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start; }
 
-[self-end], [self="end"] {
+[self-end],
+[self="end"] {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end; }
 
-[self-center], [self="center"] {
+[self-center],
+[self="center"] {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center; }
 
-[self-stretch], [self="stretch"] {
+[self-stretch],
+[self="stretch"] {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch; }
 
-[self-baseline], [self="baseline"] {
+[self-baseline],
+[self="baseline"] {
   -webkit-align-self: baseline;
       -ms-flex-item-align: baseline;
           align-self: baseline; }
