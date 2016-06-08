@@ -54,90 +54,67 @@
 /* flex container */
 /* @deprecated, 'layout' is superfluous, just use 'column' or 'row' */
 [layout] {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
 /* primary flex child*/
 /* Set to explict values for flex-grow, flex-shrink and flex-basis, so browsers have correct values by default. https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed */
 [flex] {
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%; }
+  -ms-flex: 1 1 0%;
+      flex: 1 1 0%; }
 
 /* flex-basis - if set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value. http://www.w3.org/TR/css3-flexbox/images/rel-vs-abs-flex.svg */
 [basis="auto"] {
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto; }
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto; }
 
 [basis="0%"] {
-  -webkit-flex-basis: 0%;
-      -ms-flex-preferred-size: 0%;
-          flex-basis: 0%; }
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%; }
 
-[column],
-[layout="column"] {
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-flex;
+[column], [layout="column"] {
+  -ms-flex-direction: column;
+      flex-direction: column;
   display: -ms-flexbox;
   display: flex; }
 
-[column="reverse"],
-[column][reverse] {
-  -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
+[column="reverse"], [column][reverse] {
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
 
-[row],
-[layout="row"] {
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  display: -webkit-flex;
+[row], [layout="row"] {
+  -ms-flex-direction: row;
+      flex-direction: row;
   display: -ms-flexbox;
   display: flex; }
 
-[row="inline"],
-[row][inline] {
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  display: -webkit-inline-flex;
+[row="inline"], [row][inline] {
+  -ms-flex-direction: row;
+      flex-direction: row;
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
-[column="inline"],
-[column][inline] {
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-inline-flex;
+[column="inline"], [column][inline] {
+  -ms-flex-direction: column;
+      flex-direction: column;
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
-[row="reverse"],
-[row][reverse] {
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+[row="reverse"], [row][reverse] {
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse; }
 
 [wrap] {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 [wrap][reverse] {
-  -webkit-flex-wrap: wrap-reverse;
-      -ms-flex-wrap: wrap-reverse;
-          flex-wrap: wrap-reverse; }
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
 
 [no-wrap] {
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
 
 /* sizing
 ----------------------------------------------- */
@@ -158,160 +135,129 @@
 ----------------------------------------------- */
 /* order="1|2|3" */
 [order="0"] {
-  -webkit-order: 0;
-      -ms-flex-order: 0;
-          order: 0; }
+  -ms-flex-order: 0;
+      order: 0; }
 
 [order="1"] {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1; }
+  -ms-flex-order: 1;
+      order: 1; }
 
 [order="2"] {
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
+  -ms-flex-order: 2;
+      order: 2; }
 
 [order="3"] {
-  -webkit-order: 3;
-      -ms-flex-order: 3;
-          order: 3; }
+  -ms-flex-order: 3;
+      order: 3; }
 
 [order="4"] {
-  -webkit-order: 4;
-      -ms-flex-order: 4;
-          order: 4; }
+  -ms-flex-order: 4;
+      order: 4; }
 
 [order="5"] {
-  -webkit-order: 5;
-      -ms-flex-order: 5;
-          order: 5; }
+  -ms-flex-order: 5;
+      order: 5; }
 
 [order="6"] {
-  -webkit-order: 6;
-      -ms-flex-order: 6;
-          order: 6; }
+  -ms-flex-order: 6;
+      order: 6; }
 
 [order="7"] {
-  -webkit-order: 7;
-      -ms-flex-order: 7;
-          order: 7; }
+  -ms-flex-order: 7;
+      order: 7; }
 
 [order="8"] {
-  -webkit-order: 8;
-      -ms-flex-order: 8;
-          order: 8; }
+  -ms-flex-order: 8;
+      order: 8; }
 
 [order="9"] {
-  -webkit-order: 9;
-      -ms-flex-order: 9;
-          order: 9; }
+  -ms-flex-order: 9;
+      order: 9; }
 
 [order="10"] {
-  -webkit-order: 10;
-      -ms-flex-order: 10;
-          order: 10; }
+  -ms-flex-order: 10;
+      order: 10; }
 
 [order="11"] {
-  -webkit-order: 11;
-      -ms-flex-order: 11;
-          order: 11; }
+  -ms-flex-order: 11;
+      order: 11; }
 
 [order="12"] {
-  -webkit-order: 12;
-      -ms-flex-order: 12;
-          order: 12; }
+  -ms-flex-order: 12;
+      order: 12; }
 
 [order="13"] {
-  -webkit-order: 13;
-      -ms-flex-order: 13;
-          order: 13; }
+  -ms-flex-order: 13;
+      order: 13; }
 
 [order="14"] {
-  -webkit-order: 14;
-      -ms-flex-order: 14;
-          order: 14; }
+  -ms-flex-order: 14;
+      order: 14; }
 
 [order="15"] {
-  -webkit-order: 15;
-      -ms-flex-order: 15;
-          order: 15; }
+  -ms-flex-order: 15;
+      order: 15; }
 
 /* alt: first, second.... */
 [first] {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1; }
+  -ms-flex-order: 1;
+      order: 1; }
 
 [second] {
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
+  -ms-flex-order: 2;
+      order: 2; }
 
 [third] {
-  -webkit-order: 3;
-      -ms-flex-order: 3;
-          order: 3; }
+  -ms-flex-order: 3;
+      order: 3; }
 
 [fourth] {
-  -webkit-order: 4;
-      -ms-flex-order: 4;
-          order: 4; }
+  -ms-flex-order: 4;
+      order: 4; }
 
 [fifth] {
-  -webkit-order: 5;
-      -ms-flex-order: 5;
-          order: 5; }
+  -ms-flex-order: 5;
+      order: 5; }
 
 [sixth] {
-  -webkit-order: 6;
-      -ms-flex-order: 6;
-          order: 6; }
+  -ms-flex-order: 6;
+      order: 6; }
 
 [seventh] {
-  -webkit-order: 7;
-      -ms-flex-order: 7;
-          order: 7; }
+  -ms-flex-order: 7;
+      order: 7; }
 
 [eigth] {
-  -webkit-order: 8;
-      -ms-flex-order: 8;
-          order: 8; }
+  -ms-flex-order: 8;
+      order: 8; }
 
 [ninth] {
-  -webkit-order: 9;
-      -ms-flex-order: 9;
-          order: 9; }
+  -ms-flex-order: 9;
+      order: 9; }
 
 [tenth] {
-  -webkit-order: 10;
-      -ms-flex-order: 10;
-          order: 10; }
+  -ms-flex-order: 10;
+      order: 10; }
 
 [eleven] {
-  -webkit-order: 11;
-      -ms-flex-order: 11;
-          order: 11; }
+  -ms-flex-order: 11;
+      order: 11; }
 
 [twelve] {
-  -webkit-order: 12;
-      -ms-flex-order: 12;
-          order: 12; }
+  -ms-flex-order: 12;
+      order: 12; }
 
 [thirteen] {
-  -webkit-order: 13;
-      -ms-flex-order: 13;
-          order: 13; }
+  -ms-flex-order: 13;
+      order: 13; }
 
 [fourteen] {
-  -webkit-order: 14;
-      -ms-flex-order: 14;
-          order: 14; }
+  -ms-flex-order: 14;
+      order: 14; }
 
 [fifteen] {
-  -webkit-order: 15;
-      -ms-flex-order: 15;
-          order: 15; }
+  -ms-flex-order: 15;
+      order: 15; }
 
 /* axis maps
 ----------------------------------------------- */
@@ -324,89 +270,69 @@
         or:
         self="center"
 ----------------------------------------------- */
-[self-start],
-[self="start"] {
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start; }
+[self-start], [self="start"] {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
 
-[self-end],
-[self="end"] {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
+[self-end], [self="end"] {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
 
-[self-center],
-[self="center"] {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center; }
+[self-center], [self="center"] {
+  -ms-flex-item-align: center;
+      align-self: center; }
 
-[self-stretch],
-[self="stretch"] {
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch; }
+[self-stretch], [self="stretch"] {
+  -ms-flex-item-align: stretch;
+      align-self: stretch; }
 
-[self-baseline],
-[self="baseline"] {
-  -webkit-align-self: baseline;
-      -ms-flex-item-align: baseline;
-          align-self: baseline; }
+[self-baseline], [self="baseline"] {
+  -ms-flex-item-align: baseline;
+      align-self: baseline; }
 
 /* main axis only
 ----------------------------------------------- */
 [main-axis="start"] {
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
 
 [main-axis="end"] {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
 
 [main-axis="center"] {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 [main-axis="space-between"] {
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 [main-axis="space-around"] {
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around; }
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 /* cross axis only
 ----------------------------------------------- */
 [cross-axis="start"] {
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start; }
+  -ms-flex-align: start;
+      align-items: flex-start; }
 
 [cross-axis="end"] {
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
+  -ms-flex-align: end;
+      align-items: flex-end; }
 
 [cross-axis="center"] {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -ms-flex-align: center;
+      align-items: center; }
 
 [cross-axis="stretch"] {
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch; }
+  -ms-flex-align: stretch;
+      align-items: stretch; }
 
 [cross-axis="baseline"] {
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline; }
+  -ms-flex-align: baseline;
+      align-items: baseline; }
 
 /*  cross axis align only
     TODO: dislike the name.
@@ -414,34 +340,28 @@
     single line of content in the container (spec)
 ----------------------------------------------- */
 [cross-axis-align="start"] {
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start; }
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
 
 [cross-axis-align="end"] {
-  -webkit-align-content: flex-end;
-      -ms-flex-line-pack: end;
-          align-content: flex-end; }
+  -ms-flex-line-pack: end;
+      align-content: flex-end; }
 
 [cross-axis-align="center"] {
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center; }
+  -ms-flex-line-pack: center;
+      align-content: center; }
 
 [cross-axis-align="stretch"] {
-  -webkit-align-content: stretch;
-      -ms-flex-line-pack: stretch;
-          align-content: stretch; }
+  -ms-flex-line-pack: stretch;
+      align-content: stretch; }
 
 [cross-axis-align="space-between"] {
-  -webkit-align-content: space-between;
-      -ms-flex-line-pack: justify;
-          align-content: space-between; }
+  -ms-flex-line-pack: justify;
+      align-content: space-between; }
 
 [cross-axis-align="space-around"] {
-  -webkit-align-content: space-around;
-      -ms-flex-line-pack: distribute;
-          align-content: space-around; }
+  -ms-flex-line-pack: distribute;
+      align-content: space-around; }
 
 /* axis maps
 ----------------------------------------------- */
@@ -462,102 +382,86 @@
 /* media queries by device name,
    - mobile, tablet, laptop, desktop
 ----------------------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   [mobile="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [mobile="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="mobile"] {
     display: none !important; } }
 
 @media (max-width: 767px) {
   [tablet="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [tablet="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="tablet"] {
     display: none !important; } }
 
 @media (min-width: 768px) and (max-width: 979px) {
   [laptop="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [laptop="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="laptop"] {
     display: none !important; } }
 
 @media (min-width: 1200px) {
   [desktop="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [desktop="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="desktop"] {
     display: none !important; } }
 
 /* media queries by size name,
    - sm, md, lg, xl
 ----------------------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   [sm="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [sm="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="sm"] {
     display: none !important; } }
 
 @media (max-width: 767px) {
   [md="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [md="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="md"] {
     display: none !important; } }
 
 @media (min-width: 768px) and (max-width: 979px) {
   [lg="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [lg="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="lg"] {
     display: none !important; } }
 
 @media (min-width: 1200px) {
   [xl="column"] {
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; }
+    -ms-flex-direction: column !important;
+        flex-direction: column !important; }
   [xl="row"] {
-    -webkit-flex-direction: row !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important; }
+    -ms-flex-direction: row !important;
+        flex-direction: row !important; }
   [conceal~="xl"] {
     display: none !important; } }
 
@@ -575,69 +479,56 @@
 /* flex shrink
 ----------------------------------------------- */
 [shrink="0"] {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0; }
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
 
 [shrink="1"] {
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1; }
+  -ms-flex-negative: 1;
+      flex-shrink: 1; }
 
 [shrink="2"] {
-  -webkit-flex-shrink: 2;
-      -ms-flex-negative: 2;
-          flex-shrink: 2; }
+  -ms-flex-negative: 2;
+      flex-shrink: 2; }
 
 [shrink="3"] {
-  -webkit-flex-shrink: 3;
-      -ms-flex-negative: 3;
-          flex-shrink: 3; }
+  -ms-flex-negative: 3;
+      flex-shrink: 3; }
 
 [shrink="4"] {
-  -webkit-flex-shrink: 4;
-      -ms-flex-negative: 4;
-          flex-shrink: 4; }
+  -ms-flex-negative: 4;
+      flex-shrink: 4; }
 
 [shrink="5"] {
-  -webkit-flex-shrink: 5;
-      -ms-flex-negative: 5;
-          flex-shrink: 5; }
+  -ms-flex-negative: 5;
+      flex-shrink: 5; }
 
 [shrink="6"] {
-  -webkit-flex-shrink: 6;
-      -ms-flex-negative: 6;
-          flex-shrink: 6; }
+  -ms-flex-negative: 6;
+      flex-shrink: 6; }
 
 [shrink="7"] {
-  -webkit-flex-shrink: 7;
-      -ms-flex-negative: 7;
-          flex-shrink: 7; }
+  -ms-flex-negative: 7;
+      flex-shrink: 7; }
 
 [shrink="8"] {
-  -webkit-flex-shrink: 8;
-      -ms-flex-negative: 8;
-          flex-shrink: 8; }
+  -ms-flex-negative: 8;
+      flex-shrink: 8; }
 
 [shrink="9"] {
-  -webkit-flex-shrink: 9;
-      -ms-flex-negative: 9;
-          flex-shrink: 9; }
+  -ms-flex-negative: 9;
+      flex-shrink: 9; }
 
 [shrink="10"] {
-  -webkit-flex-shrink: 10;
-      -ms-flex-negative: 10;
-          flex-shrink: 10; }
+  -ms-flex-negative: 10;
+      flex-shrink: 10; }
 
 [shrink="11"] {
-  -webkit-flex-shrink: 11;
-      -ms-flex-negative: 11;
-          flex-shrink: 11; }
+  -ms-flex-negative: 11;
+      flex-shrink: 11; }
 
 [shrink="12"] {
-  -webkit-flex-shrink: 12;
-      -ms-flex-negative: 12;
-          flex-shrink: 12; }
+  -ms-flex-negative: 12;
+      flex-shrink: 12; }
 
 /* axis maps
 ----------------------------------------------- */
@@ -647,69 +538,56 @@
 /* flex grow
 ----------------------------------------------- */
 [grow="0"] {
-  -webkit-flex-grow: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0; }
+  -ms-flex-positive: 0;
+      flex-grow: 0; }
 
 [grow="1"] {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
+  -ms-flex-positive: 1;
+      flex-grow: 1; }
 
 [grow="2"] {
-  -webkit-flex-grow: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2; }
+  -ms-flex-positive: 2;
+      flex-grow: 2; }
 
 [grow="3"] {
-  -webkit-flex-grow: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3; }
+  -ms-flex-positive: 3;
+      flex-grow: 3; }
 
 [grow="4"] {
-  -webkit-flex-grow: 4;
-      -ms-flex-positive: 4;
-          flex-grow: 4; }
+  -ms-flex-positive: 4;
+      flex-grow: 4; }
 
 [grow="5"] {
-  -webkit-flex-grow: 5;
-      -ms-flex-positive: 5;
-          flex-grow: 5; }
+  -ms-flex-positive: 5;
+      flex-grow: 5; }
 
 [grow="6"] {
-  -webkit-flex-grow: 6;
-      -ms-flex-positive: 6;
-          flex-grow: 6; }
+  -ms-flex-positive: 6;
+      flex-grow: 6; }
 
 [grow="7"] {
-  -webkit-flex-grow: 7;
-      -ms-flex-positive: 7;
-          flex-grow: 7; }
+  -ms-flex-positive: 7;
+      flex-grow: 7; }
 
 [grow="8"] {
-  -webkit-flex-grow: 8;
-      -ms-flex-positive: 8;
-          flex-grow: 8; }
+  -ms-flex-positive: 8;
+      flex-grow: 8; }
 
 [grow="9"] {
-  -webkit-flex-grow: 9;
-      -ms-flex-positive: 9;
-          flex-grow: 9; }
+  -ms-flex-positive: 9;
+      flex-grow: 9; }
 
 [grow="10"] {
-  -webkit-flex-grow: 10;
-      -ms-flex-positive: 10;
-          flex-grow: 10; }
+  -ms-flex-positive: 10;
+      flex-grow: 10; }
 
 [grow="11"] {
-  -webkit-flex-grow: 11;
-      -ms-flex-positive: 11;
-          flex-grow: 11; }
+  -ms-flex-positive: 11;
+      flex-grow: 11; }
 
 [grow="12"] {
-  -webkit-flex-grow: 12;
-      -ms-flex-positive: 12;
-          flex-grow: 12; }
+  -ms-flex-positive: 12;
+      flex-grow: 12; }
 
 /* axis maps
 ----------------------------------------------- */
@@ -726,8 +604,7 @@
 
 /* various outlines
 ----------------------------------------------- */
-[outline],
-[outline="red"] {
+[outline], [outline="red"] {
   outline: 1px solid #990000; }
 
 [outline="333"] {

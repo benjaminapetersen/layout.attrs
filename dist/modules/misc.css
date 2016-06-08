@@ -13,8 +13,7 @@
 
 /* various outlines
 ----------------------------------------------- */
-[outline],
-[outline="red"] {
+[outline], [outline="red"] {
   outline: 1px solid #990000; }
 
 [outline="333"] {
