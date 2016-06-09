@@ -39,90 +39,67 @@
 /* flex container */
 /* @deprecated, 'layout' is superfluous, just use 'column' or 'row' */
 [layout] {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
 /* primary flex child*/
 /* Set to explict values for flex-grow, flex-shrink and flex-basis, so browsers have correct values by default. https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed */
 [flex] {
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%; }
+  -ms-flex: 1 1 0%;
+      flex: 1 1 0%; }
 
 /* flex-basis - if set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value. http://www.w3.org/TR/css3-flexbox/images/rel-vs-abs-flex.svg */
 [basis="auto"] {
-  -webkit-flex-basis: auto;
-      -ms-flex-preferred-size: auto;
-          flex-basis: auto; }
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto; }
 
 [basis="0%"] {
-  -webkit-flex-basis: 0%;
-      -ms-flex-preferred-size: 0%;
-          flex-basis: 0%; }
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%; }
 
-[column],
-[layout="column"] {
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-flex;
+[column], [layout="column"] {
+  -ms-flex-direction: column;
+      flex-direction: column;
   display: -ms-flexbox;
   display: flex; }
 
-[column="reverse"],
-[column][reverse] {
-  -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse; }
+[column="reverse"], [column][reverse] {
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
 
-[row],
-[layout="row"] {
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  display: -webkit-flex;
+[row], [layout="row"] {
+  -ms-flex-direction: row;
+      flex-direction: row;
   display: -ms-flexbox;
   display: flex; }
 
-[row="inline"],
-[row][inline] {
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  display: -webkit-inline-flex;
+[row="inline"], [row][inline] {
+  -ms-flex-direction: row;
+      flex-direction: row;
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
-[column="inline"],
-[column][inline] {
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-inline-flex;
+[column="inline"], [column][inline] {
+  -ms-flex-direction: column;
+      flex-direction: column;
   display: -ms-inline-flexbox;
   display: inline-flex; }
 
-[row="reverse"],
-[row][reverse] {
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+[row="reverse"], [row][reverse] {
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse; }
 
 [wrap] {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 [wrap][reverse] {
-  -webkit-flex-wrap: wrap-reverse;
-      -ms-flex-wrap: wrap-reverse;
-          flex-wrap: wrap-reverse; }
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
 
 [no-wrap] {
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap; }
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
 
 /* sizing
 ----------------------------------------------- */
