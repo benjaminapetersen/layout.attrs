@@ -1,0 +1,21 @@
+/* classes
+   -------------------------------- */
+.layout {
+  display: flex; }
+
+.flex {
+  flex: 1 1 0%; }
+
+.basis-auto {
+  flex-basis: auto; }
+
+/* attrs
+   -------------------------------- */
+[layout] {
+  display: flex; }
+
+[flex] {
+  flex: 1 1 0%; }
+
+[basis="auto"], [basis-auto] {
+  flex-basis: auto; }
