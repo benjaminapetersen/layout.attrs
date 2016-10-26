@@ -1,0 +1,15 @@
+@import '../functions';
+@import 'vals';
+
+/* classes
+   -------------------------------- */
+// .layout {}
+// .flex {}
+// .basis-auto {}
+@each $map in $list {
+  #{ make-class-name(map-get($map, name), map-get($map, mod), $prefix) } {
+    @each $key, $value in map-get($map, rules)  {
+      #{$key}: $value;
+    }
+  }
+}

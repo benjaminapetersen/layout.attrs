@@ -1,77 +1,91 @@
-// optional prefix could be useful for namespace
-$prefix: '';
-
-$list: (
-  (
-    name: layout,
-    rules: (
-      display: flex
-    )
-  ),
-  (
-    name: flex,
-    rules: (
-      flex: 1 1 0%
-    )
-  ),
-  (
-    name: basis,
-    mod: auto,
-    rules: (
-      flex-basis: auto
-    )
-  )
-);
-
-@function make-dash-name($name, $mod, $prefix) {
-  @if $mod {
-    @return #{$prefix}#{$name}-#{$mod};
-  }
-  @return #{$prefix}#{$name};
-}
-
-@function make-key-eq-val-name($name, $mod, $prefix) {
-  @if $mod {
-    @return '#{$prefix}#{$name}="#{$mod}"';
-  }
-  @return false;
-}
-
-@function make-attr-names($name, $mod, $prefix) {
-  $key-val-name: make-key-eq-val-name($name, $mod, $prefix);
-  $dash-name: make-dash-name($name, $mod, $prefix);
-  @if $key-val-name {
-    @return '[#{$key-val-name}], [#{$dash-name}]';
-  }
-  @return '[#{$dash-name}]';
-}
-
-
-/* classes
-   -------------------------------- */
-// .layout {}
-// .flex {}
-// .basis-auto {}
-@each $map in $list {
-  .#{ make-dash-name(map-get($map, name), map-get($map, mod), $prefix) } {
-    @each $key, $value in map-get($map, rules)  {
-      #{$key}: $value;
-    }
-  }
-}
-
-
-/* attrs
-   -------------------------------- */
-// [layout] {}
-// [flex] {}
-// [basis="auto"] {}
-@each $map in $list {
-  // [#{make-key-eq-val-name(map-get($map, name), map-get($map, mod), $prefix)}],
-  // [#{ make-dash-name(map-get($map, name), map-get($map, mod), $prefix) }] {
-  #{make-attr-names(map-get($map, name), map-get($map, mod), $prefix)} {
-    @each $key, $value in map-get($map, rules)  {
-      #{$key}: $value;
-    }
-  }
-}
+// @import 'functions';
+//
+// // optional prefix could be useful for namespace
+// $prefix: '';
+//
+// $list: (
+//   (
+//     name: layout,
+//     rules: (
+//       display: flex
+//     )
+//   ),
+//   (
+//     name: flex,
+//     rules: (
+//       flex: 1 1 0%
+//     )
+//   ),
+//   (
+//     name: basis,
+//     mod: auto,
+//     rules: (
+//       flex-basis: auto
+//     )
+//   ), (
+//     name: basis,
+//     mod: zero,
+//     rules: (
+//       flex-basis: 0%
+//     )
+//   ), (
+//     name: column,
+//     rules: (
+//       flex-direction: column,
+//       display: flex
+//     )
+//   ),
+//   // [column][reverse] ?
+//   (
+//     name: row,
+//     rules: (
+//       flex-direction: row,
+//       display: flex
+//     )
+//   ),
+//   // [row][reverse] ?
+//   (
+//     name: row,
+//     mod: inline,
+//     rules: (
+//       flex-direction: row,
+//       display: inline-flex
+//     )
+//   ), (
+//     name: row,
+//     mod: reverse,
+//     rules: (
+//       flex-direction: row-reverse
+//     )
+//   )
+//   // TODO: how to handle combos? [row][reverse]
+// );
+//
+//
+//
+// /* classes
+//    -------------------------------- */
+// // .layout {}
+// // .flex {}
+// // .basis-auto {}
+// @each $map in $list {
+//   .#{ make-dash-name(map-get($map, name), map-get($map, mod), $prefix) } {
+//     @each $key, $value in map-get($map, rules)  {
+//       #{$key}: $value;
+//     }
+//   }
+// }
+//
+//
+// /* attrs
+//    -------------------------------- */
+// // [layout] {}
+// // [flex] {}
+// // [basis="auto"] {}
+// @each $map in $list {
+//   #{make-attr-names(map-get($map, name), map-get($map, mod), $prefix)} {
+//     @each $key, $value in map-get($map, rules)  {
+//       #{$key}: $value;
+//     }
+//   }
+// }

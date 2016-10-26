@@ -1,0 +1,18 @@
+@import '../functions';
+@import 'vals';
+
+/* attrs
+   -------------------------------- */
+// [layout] {}
+// [flex] {}
+// [basis="auto"] {}
+@each $map in $list {
+  @if(map-get($map, comment)) {
+    /* #{map-get($map, comment)} */
+  }
+  #{make-attr-names(map-get($map, name), map-get($map, mod), $prefix)} {
+    @each $key, $value in map-get($map, rules)  {
+      #{$key}: $value;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+// optional prefix could be useful for namespace
+$prefix: '';
+
+// rules is a set of declartions for each selector
+// in the standard property:value format of css
+$list: (
+  (
+    name: layout,
+    rules: (
+      display: flex
+    )
+  ),
+  (
+    name: flex,
+    rules: (
+      flex: 1 1 0%
+    )
+  ), (
+    name: flex,
+    mod: content,
+    comment: 'No support for flex: content',
+    rules: (
+      flex: content
+    )
+  ), (
+    name: basis,
+    mod: auto,
+    rules: (
+      flex-basis: auto
+    )
+  ), (
+    name: basis,
+    mod: zero,
+    rules: (
+      flex-basis: 0%
+    )
+  ), (
+    name: column,
+    rules: (
+      flex-direction: column,
+      display: flex
+    )
+  ), (
+    name: column,
+    mod: reverse,
+    rules: (
+      flex-direction: column-reverse
+    )
+  ), (
+    name: column,
+    mod: inline,
+    rules: (
+      flex-direction: column,
+      display: inline-flex
+    )
+  ),(
+    name: row,
+    rules: (
+      flex-direction: row,
+      display: flex
+    )
+  ), (
+    name: row,
+    mod: reverse,
+    rules: (
+      flex-direction: row-reverse
+    )
+  ), (
+    name: row,
+    mod: inline,
+    rules: (
+      flex-direction: row,
+      display: inline-flex
+    )
+  ), (
+    name: wrap,
+    rules: (
+      flex-wrap: wrap
+    )
+  ), (
+    name: wrap,
+    mod: reverse,
+    rules: (
+      flex-wrap: wrap-reverse
+    )
+  ), (
+    name: no-wrap,
+    rules: (
+      flex-wrap: nowrap
+    )
+  ), (
+    name: fit,
+    comment: 'Match the parent',
+    rules: (
+      margin: 0px,
+      width: 100%,
+      min-height: auto,
+      height: inherit
+    )
+  ), (
+    name: foo,
+    mod: bar,
+    rules: (
+      border: 1px solid #990000
+    )
+  )
+);

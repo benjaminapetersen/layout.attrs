@@ -1,0 +1,134 @@
+// basic helpers
+// -----------------------------------------------
+
+// - generates values in ems based on px sizes
+// - $base-font variable in variables.scss can change scale
+// - defaults to 14 if $base-font is not defined
+@function em($val) {
+    @if variable-exists(base-font) {
+        @return ($val / $base-font ) * 1em;
+    }@else {
+        @return ($val / 14 ) * 1em;
+    }
+}
+
+// turns 100 into 100px
+@function px($val) {
+    @return #{$val}px;
+}
+
+// percent-of(100px, 1000px) -> 10%
+@function percent-of($in, $out) {
+    @return ($in / $out) * 100%;
+}
+
+// - handy functions borrowed from hugo
+// - http://hugogiraudel.com/2013/08/12/sass-functions/
+// turns 100px into 100
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+// ensure number is between two values:
+// clamp($val, 10, 100) -> if $val is 101, will return 100
+// percentage(clamp($value, 0, 100) -> return as a %
+@function clamp($value, $min, $max) {
+  @return if($value > $max, $max, if($value < $min, $min, $value));
+}
+
+// - http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+// $list: a, b, c, d, e, f;
+// $first: first($list); // a
+// $last: last($list);   // f
+@function first($list) {
+  @return nth($list, 1);
+}
+
+@function last($list) {
+  @return nth($list, length($list));
+}
+
+@function last-index($list, $value) {
+  $index: null;
+
+  @for $i from 1 through length($list) {
+    @if nth($list, $i) == $value {
+      $index: $i;
+    }
+  }
+
+  @return $index;
+}
+
+// $list: b, c, d, e, f;
+// $new-list: prepend($list, a);               // a, b, c, d, e, f
+// $new-list: prepend($list, now i know my a); // now, i, know, my, a, b, c, d, e, f
+@function prepend($list, $value) {
+    @return join($value, $list);
+}
+
+
+// generating class & attr names
+// -----------------------------------------------
+
+// for standard dashed class names like:
+// <name>-<mod>
+// flex
+// row-inline
+@function make-dash-name($name, $mod, $prefix) {
+  @if $mod {
+    @return #{$prefix}#{$name}-#{$mod};
+  }
+  @return #{$prefix}#{$name};
+}
+
+// for attr names that are key-value pairs:
+// <name>="<mod>"
+// basis="auto"
+@function make-key-eq-val-name($name, $mod, $prefix) {
+  @if $mod {
+    @return '#{$prefix}#{$name}="#{$mod}"';
+  }
+  @return false;
+}
+
+// generates class selector names, for the most part adding the `.`
+// .row
+// .row-reverse
+// .row.reverse
+@function make-class-name($name, $mod, $prefix) {
+  $dash-name: make-dash-name($name, $mod, $prefix);
+  // note: we don't need key-val-name for classes, but its a proxy for now
+  $key-val-name: make-key-eq-val-name($name, $mod, $prefix);
+  @if $key-val-name {
+    @return '.#{$dash-name}, .#{$name}.#{$mod}';
+  }
+  @return '.#{$dash-name}';
+}
+
+// Brief overview of attribute selectors:
+// [attr="value"] exact match value
+// [attr~="value"] attr contains value
+// [attr*="value"] attr contains value, more inclusive
+// [attr|="value"] attr begins with a value
+// [attr^="value"] attr begins with a value, more inclusive
+// [attr$="value"] attr ends with a value
+//
+//
+// generates attr selector names, which have multiple forms:
+// [row]
+// [row="reverse"]
+// [row-reverse]
+// [row][reverse]
+// NOTE: adds brackets
+@function make-attr-names($name, $mod, $prefix) {
+  $key-val-name: make-key-eq-val-name($name, $mod, $prefix);
+  $dash-name: make-dash-name($name, $mod, $prefix);
+
+  // if we have a key="val" name generated,
+  // we can also create [key][val]
+  @if $key-val-name {
+    @return '[#{$key-val-name}], [#{$dash-name}], [#{$name}][#{$mod}]';
+  }
+  @return '[#{$dash-name}]';
+}

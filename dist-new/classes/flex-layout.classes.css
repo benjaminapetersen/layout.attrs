@@ -1,0 +1,72 @@
+/* classes
+   -------------------------------- */
+.layout {
+  display: flex;
+}
+
+.flex {
+  flex: 1 1 0%;
+}
+
+.flex-content, .flex.content {
+  flex: content;
+}
+
+.basis-auto, .basis.auto {
+  flex-basis: auto;
+}
+
+.basis-zero, .basis.zero {
+  flex-basis: 0%;
+}
+
+.column {
+  flex-direction: column;
+  display: flex;
+}
+
+.column-reverse, .column.reverse {
+  flex-direction: column-reverse;
+}
+
+.column-inline, .column.inline {
+  flex-direction: column;
+  display: inline-flex;
+}
+
+.row {
+  flex-direction: row;
+  display: flex;
+}
+
+.row-reverse, .row.reverse {
+  flex-direction: row-reverse;
+}
+
+.row-inline, .row.inline {
+  flex-direction: row;
+  display: inline-flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse, .wrap.reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.fit {
+  margin: 0px;
+  width: 100%;
+  min-height: auto;
+  height: inherit;
+}
+
+.foo-bar, .foo.bar {
+  border: 1px solid #990000;
+}
