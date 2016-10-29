@@ -1,74 +1,110 @@
 /* attrs
    -------------------------------- */
-[layout] {
+[fx-layout] {
   display: flex;
 }
 
-[flex] {
+[fx-flex] {
   flex: 1 1 0%;
 }
 
-/* No support for flex: content */
-[flex="content"], [flex-content], [flex][content] {
+[fx-flex="content"], [fx-flex-content], [fx-flex][fx-content] {
   flex: content;
 }
 
-[basis="auto"], [basis-auto], [basis][auto] {
+[fx-basis="auto"], [fx-basis-auto], [fx-basis][fx-auto] {
   flex-basis: auto;
 }
 
-[basis="zero"], [basis-zero], [basis][zero] {
+[fx-basis="zero"], [fx-basis-zero], [fx-basis][fx-zero] {
   flex-basis: 0%;
 }
 
-[column] {
+[fx-column] {
   flex-direction: column;
   display: flex;
 }
 
-[column="reverse"], [column-reverse], [column][reverse] {
+[fx-column="reverse"], [fx-column-reverse], [fx-column][fx-reverse] {
   flex-direction: column-reverse;
 }
 
-[column="inline"], [column-inline], [column][inline] {
+[fx-column="inline"], [fx-column-inline], [fx-column][fx-inline] {
   flex-direction: column;
   display: inline-flex;
 }
 
-[row] {
+[fx-row] {
   flex-direction: row;
   display: flex;
 }
 
-[row="reverse"], [row-reverse], [row][reverse] {
+[fx-row="reverse"], [fx-row-reverse], [fx-row][fx-reverse] {
   flex-direction: row-reverse;
 }
 
-[row="inline"], [row-inline], [row][inline] {
+[fx-row="inline"], [fx-row-inline], [fx-row][fx-inline] {
   flex-direction: row;
   display: inline-flex;
 }
 
-[wrap] {
+[fx-wrap] {
   flex-wrap: wrap;
 }
 
-[wrap="reverse"], [wrap-reverse], [wrap][reverse] {
+[fx-wrap="reverse"], [fx-wrap-reverse], [fx-wrap][fx-reverse] {
   flex-wrap: wrap-reverse;
 }
 
-[no-wrap] {
+[fx-no-wrap] {
   flex-wrap: nowrap;
 }
 
-/* Match the parent */
-[fit] {
+[fx-fit] {
   margin: 0px;
   width: 100%;
   min-height: auto;
   height: inherit;
 }
 
-[foo="bar"], [foo-bar], [foo][bar] {
-  border: 1px solid #990000;
+[fx-height-max] {
+  height: 100%;
+}
+
+[fx-hide] {
+  display: none !important;
+}
+
+[fx-outline] {
+  outline: 1px solid #990000;
+}
+
+[fx-outline="red"], [fx-outline-red] {
+  outline: 1px solid #990000;
+}
+
+[fx-outline="gray"], [fx-outline-gray] {
+  outline: 1px solid #999;
+}
+
+[fx-overflow-hidden] {
+  overflow: hidden;
+}
+
+[fx-scrollable] {
+  overflow: scroll;
+}
+
+[fx-truncate] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+[fx-break-word] {
+  word-break: break-all;
+}
+
+[fx-nowrap] {
+  white-space: nowrap;
 }

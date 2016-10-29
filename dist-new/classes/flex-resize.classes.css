@@ -1,0 +1,852 @@
+/* resize (optional)
+  - shorthand replacement for grow & shrink
+  - has a larger footprint in file size, but terse:
+  - replace this:
+    <div class="flex grow-3 shrink-5">
+  - with this:
+    <div class="flex resize-3-5">
+----------------------------------------------- */
+.fx-resize-0-0 {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.fx-resize-0-1 {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.fx-resize-0-2 {
+  flex-grow: 0;
+  flex-shrink: 2;
+}
+
+.fx-resize-0-3 {
+  flex-grow: 0;
+  flex-shrink: 3;
+}
+
+.fx-resize-0-4 {
+  flex-grow: 0;
+  flex-shrink: 4;
+}
+
+.fx-resize-0-5 {
+  flex-grow: 0;
+  flex-shrink: 5;
+}
+
+.fx-resize-0-6 {
+  flex-grow: 0;
+  flex-shrink: 6;
+}
+
+.fx-resize-0-7 {
+  flex-grow: 0;
+  flex-shrink: 7;
+}
+
+.fx-resize-0-8 {
+  flex-grow: 0;
+  flex-shrink: 8;
+}
+
+.fx-resize-0-9 {
+  flex-grow: 0;
+  flex-shrink: 9;
+}
+
+.fx-resize-0-10 {
+  flex-grow: 0;
+  flex-shrink: 10;
+}
+
+.fx-resize-0-11 {
+  flex-grow: 0;
+  flex-shrink: 11;
+}
+
+.fx-resize-0-12 {
+  flex-grow: 0;
+  flex-shrink: 12;
+}
+
+.fx-resize-1-0 {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.fx-resize-1-1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.fx-resize-1-2 {
+  flex-grow: 1;
+  flex-shrink: 2;
+}
+
+.fx-resize-1-3 {
+  flex-grow: 1;
+  flex-shrink: 3;
+}
+
+.fx-resize-1-4 {
+  flex-grow: 1;
+  flex-shrink: 4;
+}
+
+.fx-resize-1-5 {
+  flex-grow: 1;
+  flex-shrink: 5;
+}
+
+.fx-resize-1-6 {
+  flex-grow: 1;
+  flex-shrink: 6;
+}
+
+.fx-resize-1-7 {
+  flex-grow: 1;
+  flex-shrink: 7;
+}
+
+.fx-resize-1-8 {
+  flex-grow: 1;
+  flex-shrink: 8;
+}
+
+.fx-resize-1-9 {
+  flex-grow: 1;
+  flex-shrink: 9;
+}
+
+.fx-resize-1-10 {
+  flex-grow: 1;
+  flex-shrink: 10;
+}
+
+.fx-resize-1-11 {
+  flex-grow: 1;
+  flex-shrink: 11;
+}
+
+.fx-resize-1-12 {
+  flex-grow: 1;
+  flex-shrink: 12;
+}
+
+.fx-resize-2-0 {
+  flex-grow: 2;
+  flex-shrink: 0;
+}
+
+.fx-resize-2-1 {
+  flex-grow: 2;
+  flex-shrink: 1;
+}
+
+.fx-resize-2-2 {
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+
+.fx-resize-2-3 {
+  flex-grow: 2;
+  flex-shrink: 3;
+}
+
+.fx-resize-2-4 {
+  flex-grow: 2;
+  flex-shrink: 4;
+}
+
+.fx-resize-2-5 {
+  flex-grow: 2;
+  flex-shrink: 5;
+}
+
+.fx-resize-2-6 {
+  flex-grow: 2;
+  flex-shrink: 6;
+}
+
+.fx-resize-2-7 {
+  flex-grow: 2;
+  flex-shrink: 7;
+}
+
+.fx-resize-2-8 {
+  flex-grow: 2;
+  flex-shrink: 8;
+}
+
+.fx-resize-2-9 {
+  flex-grow: 2;
+  flex-shrink: 9;
+}
+
+.fx-resize-2-10 {
+  flex-grow: 2;
+  flex-shrink: 10;
+}
+
+.fx-resize-2-11 {
+  flex-grow: 2;
+  flex-shrink: 11;
+}
+
+.fx-resize-2-12 {
+  flex-grow: 2;
+  flex-shrink: 12;
+}
+
+.fx-resize-3-0 {
+  flex-grow: 3;
+  flex-shrink: 0;
+}
+
+.fx-resize-3-1 {
+  flex-grow: 3;
+  flex-shrink: 1;
+}
+
+.fx-resize-3-2 {
+  flex-grow: 3;
+  flex-shrink: 2;
+}
+
+.fx-resize-3-3 {
+  flex-grow: 3;
+  flex-shrink: 3;
+}
+
+.fx-resize-3-4 {
+  flex-grow: 3;
+  flex-shrink: 4;
+}
+
+.fx-resize-3-5 {
+  flex-grow: 3;
+  flex-shrink: 5;
+}
+
+.fx-resize-3-6 {
+  flex-grow: 3;
+  flex-shrink: 6;
+}
+
+.fx-resize-3-7 {
+  flex-grow: 3;
+  flex-shrink: 7;
+}
+
+.fx-resize-3-8 {
+  flex-grow: 3;
+  flex-shrink: 8;
+}
+
+.fx-resize-3-9 {
+  flex-grow: 3;
+  flex-shrink: 9;
+}
+
+.fx-resize-3-10 {
+  flex-grow: 3;
+  flex-shrink: 10;
+}
+
+.fx-resize-3-11 {
+  flex-grow: 3;
+  flex-shrink: 11;
+}
+
+.fx-resize-3-12 {
+  flex-grow: 3;
+  flex-shrink: 12;
+}
+
+.fx-resize-4-0 {
+  flex-grow: 4;
+  flex-shrink: 0;
+}
+
+.fx-resize-4-1 {
+  flex-grow: 4;
+  flex-shrink: 1;
+}
+
+.fx-resize-4-2 {
+  flex-grow: 4;
+  flex-shrink: 2;
+}
+
+.fx-resize-4-3 {
+  flex-grow: 4;
+  flex-shrink: 3;
+}
+
+.fx-resize-4-4 {
+  flex-grow: 4;
+  flex-shrink: 4;
+}
+
+.fx-resize-4-5 {
+  flex-grow: 4;
+  flex-shrink: 5;
+}
+
+.fx-resize-4-6 {
+  flex-grow: 4;
+  flex-shrink: 6;
+}
+
+.fx-resize-4-7 {
+  flex-grow: 4;
+  flex-shrink: 7;
+}
+
+.fx-resize-4-8 {
+  flex-grow: 4;
+  flex-shrink: 8;
+}
+
+.fx-resize-4-9 {
+  flex-grow: 4;
+  flex-shrink: 9;
+}
+
+.fx-resize-4-10 {
+  flex-grow: 4;
+  flex-shrink: 10;
+}
+
+.fx-resize-4-11 {
+  flex-grow: 4;
+  flex-shrink: 11;
+}
+
+.fx-resize-4-12 {
+  flex-grow: 4;
+  flex-shrink: 12;
+}
+
+.fx-resize-5-0 {
+  flex-grow: 5;
+  flex-shrink: 0;
+}
+
+.fx-resize-5-1 {
+  flex-grow: 5;
+  flex-shrink: 1;
+}
+
+.fx-resize-5-2 {
+  flex-grow: 5;
+  flex-shrink: 2;
+}
+
+.fx-resize-5-3 {
+  flex-grow: 5;
+  flex-shrink: 3;
+}
+
+.fx-resize-5-4 {
+  flex-grow: 5;
+  flex-shrink: 4;
+}
+
+.fx-resize-5-5 {
+  flex-grow: 5;
+  flex-shrink: 5;
+}
+
+.fx-resize-5-6 {
+  flex-grow: 5;
+  flex-shrink: 6;
+}
+
+.fx-resize-5-7 {
+  flex-grow: 5;
+  flex-shrink: 7;
+}
+
+.fx-resize-5-8 {
+  flex-grow: 5;
+  flex-shrink: 8;
+}
+
+.fx-resize-5-9 {
+  flex-grow: 5;
+  flex-shrink: 9;
+}
+
+.fx-resize-5-10 {
+  flex-grow: 5;
+  flex-shrink: 10;
+}
+
+.fx-resize-5-11 {
+  flex-grow: 5;
+  flex-shrink: 11;
+}
+
+.fx-resize-5-12 {
+  flex-grow: 5;
+  flex-shrink: 12;
+}
+
+.fx-resize-6-0 {
+  flex-grow: 6;
+  flex-shrink: 0;
+}
+
+.fx-resize-6-1 {
+  flex-grow: 6;
+  flex-shrink: 1;
+}
+
+.fx-resize-6-2 {
+  flex-grow: 6;
+  flex-shrink: 2;
+}
+
+.fx-resize-6-3 {
+  flex-grow: 6;
+  flex-shrink: 3;
+}
+
+.fx-resize-6-4 {
+  flex-grow: 6;
+  flex-shrink: 4;
+}
+
+.fx-resize-6-5 {
+  flex-grow: 6;
+  flex-shrink: 5;
+}
+
+.fx-resize-6-6 {
+  flex-grow: 6;
+  flex-shrink: 6;
+}
+
+.fx-resize-6-7 {
+  flex-grow: 6;
+  flex-shrink: 7;
+}
+
+.fx-resize-6-8 {
+  flex-grow: 6;
+  flex-shrink: 8;
+}
+
+.fx-resize-6-9 {
+  flex-grow: 6;
+  flex-shrink: 9;
+}
+
+.fx-resize-6-10 {
+  flex-grow: 6;
+  flex-shrink: 10;
+}
+
+.fx-resize-6-11 {
+  flex-grow: 6;
+  flex-shrink: 11;
+}
+
+.fx-resize-6-12 {
+  flex-grow: 6;
+  flex-shrink: 12;
+}
+
+.fx-resize-7-0 {
+  flex-grow: 7;
+  flex-shrink: 0;
+}
+
+.fx-resize-7-1 {
+  flex-grow: 7;
+  flex-shrink: 1;
+}
+
+.fx-resize-7-2 {
+  flex-grow: 7;
+  flex-shrink: 2;
+}
+
+.fx-resize-7-3 {
+  flex-grow: 7;
+  flex-shrink: 3;
+}
+
+.fx-resize-7-4 {
+  flex-grow: 7;
+  flex-shrink: 4;
+}
+
+.fx-resize-7-5 {
+  flex-grow: 7;
+  flex-shrink: 5;
+}
+
+.fx-resize-7-6 {
+  flex-grow: 7;
+  flex-shrink: 6;
+}
+
+.fx-resize-7-7 {
+  flex-grow: 7;
+  flex-shrink: 7;
+}
+
+.fx-resize-7-8 {
+  flex-grow: 7;
+  flex-shrink: 8;
+}
+
+.fx-resize-7-9 {
+  flex-grow: 7;
+  flex-shrink: 9;
+}
+
+.fx-resize-7-10 {
+  flex-grow: 7;
+  flex-shrink: 10;
+}
+
+.fx-resize-7-11 {
+  flex-grow: 7;
+  flex-shrink: 11;
+}
+
+.fx-resize-7-12 {
+  flex-grow: 7;
+  flex-shrink: 12;
+}
+
+.fx-resize-8-0 {
+  flex-grow: 8;
+  flex-shrink: 0;
+}
+
+.fx-resize-8-1 {
+  flex-grow: 8;
+  flex-shrink: 1;
+}
+
+.fx-resize-8-2 {
+  flex-grow: 8;
+  flex-shrink: 2;
+}
+
+.fx-resize-8-3 {
+  flex-grow: 8;
+  flex-shrink: 3;
+}
+
+.fx-resize-8-4 {
+  flex-grow: 8;
+  flex-shrink: 4;
+}
+
+.fx-resize-8-5 {
+  flex-grow: 8;
+  flex-shrink: 5;
+}
+
+.fx-resize-8-6 {
+  flex-grow: 8;
+  flex-shrink: 6;
+}
+
+.fx-resize-8-7 {
+  flex-grow: 8;
+  flex-shrink: 7;
+}
+
+.fx-resize-8-8 {
+  flex-grow: 8;
+  flex-shrink: 8;
+}
+
+.fx-resize-8-9 {
+  flex-grow: 8;
+  flex-shrink: 9;
+}
+
+.fx-resize-8-10 {
+  flex-grow: 8;
+  flex-shrink: 10;
+}
+
+.fx-resize-8-11 {
+  flex-grow: 8;
+  flex-shrink: 11;
+}
+
+.fx-resize-8-12 {
+  flex-grow: 8;
+  flex-shrink: 12;
+}
+
+.fx-resize-9-0 {
+  flex-grow: 9;
+  flex-shrink: 0;
+}
+
+.fx-resize-9-1 {
+  flex-grow: 9;
+  flex-shrink: 1;
+}
+
+.fx-resize-9-2 {
+  flex-grow: 9;
+  flex-shrink: 2;
+}
+
+.fx-resize-9-3 {
+  flex-grow: 9;
+  flex-shrink: 3;
+}
+
+.fx-resize-9-4 {
+  flex-grow: 9;
+  flex-shrink: 4;
+}
+
+.fx-resize-9-5 {
+  flex-grow: 9;
+  flex-shrink: 5;
+}
+
+.fx-resize-9-6 {
+  flex-grow: 9;
+  flex-shrink: 6;
+}
+
+.fx-resize-9-7 {
+  flex-grow: 9;
+  flex-shrink: 7;
+}
+
+.fx-resize-9-8 {
+  flex-grow: 9;
+  flex-shrink: 8;
+}
+
+.fx-resize-9-9 {
+  flex-grow: 9;
+  flex-shrink: 9;
+}
+
+.fx-resize-9-10 {
+  flex-grow: 9;
+  flex-shrink: 10;
+}
+
+.fx-resize-9-11 {
+  flex-grow: 9;
+  flex-shrink: 11;
+}
+
+.fx-resize-9-12 {
+  flex-grow: 9;
+  flex-shrink: 12;
+}
+
+.fx-resize-10-0 {
+  flex-grow: 10;
+  flex-shrink: 0;
+}
+
+.fx-resize-10-1 {
+  flex-grow: 10;
+  flex-shrink: 1;
+}
+
+.fx-resize-10-2 {
+  flex-grow: 10;
+  flex-shrink: 2;
+}
+
+.fx-resize-10-3 {
+  flex-grow: 10;
+  flex-shrink: 3;
+}
+
+.fx-resize-10-4 {
+  flex-grow: 10;
+  flex-shrink: 4;
+}
+
+.fx-resize-10-5 {
+  flex-grow: 10;
+  flex-shrink: 5;
+}
+
+.fx-resize-10-6 {
+  flex-grow: 10;
+  flex-shrink: 6;
+}
+
+.fx-resize-10-7 {
+  flex-grow: 10;
+  flex-shrink: 7;
+}
+
+.fx-resize-10-8 {
+  flex-grow: 10;
+  flex-shrink: 8;
+}
+
+.fx-resize-10-9 {
+  flex-grow: 10;
+  flex-shrink: 9;
+}
+
+.fx-resize-10-10 {
+  flex-grow: 10;
+  flex-shrink: 10;
+}
+
+.fx-resize-10-11 {
+  flex-grow: 10;
+  flex-shrink: 11;
+}
+
+.fx-resize-10-12 {
+  flex-grow: 10;
+  flex-shrink: 12;
+}
+
+.fx-resize-11-0 {
+  flex-grow: 11;
+  flex-shrink: 0;
+}
+
+.fx-resize-11-1 {
+  flex-grow: 11;
+  flex-shrink: 1;
+}
+
+.fx-resize-11-2 {
+  flex-grow: 11;
+  flex-shrink: 2;
+}
+
+.fx-resize-11-3 {
+  flex-grow: 11;
+  flex-shrink: 3;
+}
+
+.fx-resize-11-4 {
+  flex-grow: 11;
+  flex-shrink: 4;
+}
+
+.fx-resize-11-5 {
+  flex-grow: 11;
+  flex-shrink: 5;
+}
+
+.fx-resize-11-6 {
+  flex-grow: 11;
+  flex-shrink: 6;
+}
+
+.fx-resize-11-7 {
+  flex-grow: 11;
+  flex-shrink: 7;
+}
+
+.fx-resize-11-8 {
+  flex-grow: 11;
+  flex-shrink: 8;
+}
+
+.fx-resize-11-9 {
+  flex-grow: 11;
+  flex-shrink: 9;
+}
+
+.fx-resize-11-10 {
+  flex-grow: 11;
+  flex-shrink: 10;
+}
+
+.fx-resize-11-11 {
+  flex-grow: 11;
+  flex-shrink: 11;
+}
+
+.fx-resize-11-12 {
+  flex-grow: 11;
+  flex-shrink: 12;
+}
+
+.fx-resize-12-0 {
+  flex-grow: 12;
+  flex-shrink: 0;
+}
+
+.fx-resize-12-1 {
+  flex-grow: 12;
+  flex-shrink: 1;
+}
+
+.fx-resize-12-2 {
+  flex-grow: 12;
+  flex-shrink: 2;
+}
+
+.fx-resize-12-3 {
+  flex-grow: 12;
+  flex-shrink: 3;
+}
+
+.fx-resize-12-4 {
+  flex-grow: 12;
+  flex-shrink: 4;
+}
+
+.fx-resize-12-5 {
+  flex-grow: 12;
+  flex-shrink: 5;
+}
+
+.fx-resize-12-6 {
+  flex-grow: 12;
+  flex-shrink: 6;
+}
+
+.fx-resize-12-7 {
+  flex-grow: 12;
+  flex-shrink: 7;
+}
+
+.fx-resize-12-8 {
+  flex-grow: 12;
+  flex-shrink: 8;
+}
+
+.fx-resize-12-9 {
+  flex-grow: 12;
+  flex-shrink: 9;
+}
+
+.fx-resize-12-10 {
+  flex-grow: 12;
+  flex-shrink: 10;
+}
+
+.fx-resize-12-11 {
+  flex-grow: 12;
+  flex-shrink: 11;
+}
+
+.fx-resize-12-12 {
+  flex-grow: 12;
+  flex-shrink: 12;
+}

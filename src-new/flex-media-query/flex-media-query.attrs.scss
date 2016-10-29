@@ -1,0 +1,40 @@
+// @import '../variables';
+// @import '../functions';
+//
+// /* media queries by device name,
+//    - mobile="column"
+//    - tablet="row"
+//    - etc.
+// ----------------------------------------------- */
+// @each $device, $query in $mediaDevices {
+//     @media (unquote($query)) {
+//         @each $orientation in $mediaOrientation {
+//             [#{$device}="#{$orientation}"] {
+//                 flex-direction: $orientation !important;
+//             }
+//         }
+//
+//         [conceal~="#{$device}"] {
+//             display: none !important;
+//         }
+//     }
+// }
+//
+// /* media queries by size name,
+//    - sm="column"
+//    - md="row"
+//    - etc
+// ----------------------------------------------- */
+// @each $size, $query in $mediaSizes {
+//     @media (unquote($query)) {
+//         @each $orientation in $mediaOrientation {
+//             [#{$size}="#{$orientation}"] {
+//                 flex-direction: $orientation !important;
+//             }
+//         }
+//
+//         [conceal~="#{$size}"] {
+//             display: none !important;
+//         }
+//     }
+// }

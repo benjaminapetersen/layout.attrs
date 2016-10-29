@@ -1,0 +1,94 @@
+/* main axis
+----------------------------------------------- */
+.fx-main-axis-start {
+  justify-content: flex-start;
+}
+
+.fx-main-axis-end {
+  justify-content: flex-end;
+}
+
+.fx-main-axis-center {
+  justify-content: center;
+}
+
+.fx-main-axis-space-between {
+  justify-content: space-between;
+}
+
+.fx-main-axis-space-around {
+  justify-content: space-around;
+}
+
+/* cross axis
+----------------------------------------------- */
+.fx-cross-axis-start {
+  align-items: flex-start;
+}
+
+.fx-cross-axis-end {
+  align-items: flex-end;
+}
+
+.fx-cross-axis-center {
+  align-items: center;
+}
+
+.fx-cross-axis-stretch {
+  align-items: stretch;
+}
+
+.fx-cross-axis-baseline {
+  align-items: baseline;
+}
+
+/*  cross axis align
+    TODO: dislike the name.
+    NOTE: this does nothing if there is a
+    single line of content in the container (spec)
+----------------------------------------------- */
+.fx-cross-axis-align-start {
+  align-content: flex-start;
+}
+
+.fx-cross-axis-align-end {
+  align-content: flex-end;
+}
+
+.fx-cross-axis-align-center {
+  align-content: center;
+}
+
+.fx-cross-axis-align-stretch {
+  align-content: stretch;
+}
+
+.fx-cross-axis-align-space-between {
+  align-content: space-between;
+}
+
+.fx-cross-axis-align-space-around {
+  align-content: space-around;
+}
+
+/* self, for overriding the parent settings above
+----------------------------------------------- */
+.fx-self-start {
+  align-self: flex-start;
+}
+
+.fx-self-end {
+  align-self: flex-end;
+}
+
+.fx-self-center {
+  align-self: center;
+}
+
+.fx-self-stretch {
+  align-self: stretch;
+}
+
+.fx-self-baseline {
+  align-self: baseline;
+}

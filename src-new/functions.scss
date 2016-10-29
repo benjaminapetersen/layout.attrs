@@ -1,32 +1,43 @@
-// basic helpers
+// casting
 // -----------------------------------------------
+// http://hugogiraudel.com/2014/01/27/casting-types-in-sass/
+// better than $value + unquote("")
+@function to-string($value) {
+  @return inspect($value);
+}
+@function to-bool($value) {
+  @return not ($value or $value == "" or $value == 0 or $value == ());
+}
 
+
+// numbers
+// -----------------------------------------------
 // - generates values in ems based on px sizes
 // - $base-font variable in variables.scss can change scale
 // - defaults to 14 if $base-font is not defined
 @function em($val) {
-    @if variable-exists(base-font) {
-        @return ($val / $base-font ) * 1em;
-    }@else {
-        @return ($val / 14 ) * 1em;
-    }
+  @if variable-exists(base-font) {
+      @return ($val / $base-font ) * 1em;
+  }@else {
+      @return ($val / 14 ) * 1em;
+  }
 }
 
 // turns 100 into 100px
 @function px($val) {
-    @return #{$val}px;
+  @return #{$val}px;
 }
 
 // percent-of(100px, 1000px) -> 10%
 @function percent-of($in, $out) {
-    @return ($in / $out) * 100%;
+  @return ($in / $out) * 100%;
 }
 
 // - handy functions borrowed from hugo
 // - http://hugogiraudel.com/2013/08/12/sass-functions/
 // turns 100px into 100
 @function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
+  @return $value / ($value * 0 + 1);
 }
 
 // ensure number is between two values:
@@ -36,12 +47,23 @@
   @return if($value > $max, $max, if($value < $min, $min, $value));
 }
 
+
+// lists
+// -----------------------------------------------
 // - http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
 // $list: a, b, c, d, e, f;
 // $first: first($list); // a
 // $last: last($list);   // f
 @function first($list) {
   @return nth($list, 1);
+}
+
+@function second($list) {
+  @return nth($list, 2);
+}
+
+@function third($list) {
+  @return nth($list, 3);
 }
 
 @function last($list) {
@@ -64,7 +86,18 @@
 // $new-list: prepend($list, a);               // a, b, c, d, e, f
 // $new-list: prepend($list, now i know my a); // now, i, know, my, a, b, c, d, e, f
 @function prepend($list, $value) {
-    @return join($value, $list);
+  @return join($value, $list);
+}
+
+
+// font size
+// -----------------------------------------------
+// outputs px & rem:
+//  font-size: 16px;
+//  font-size: 1.6rem;
+//  /* =$size + px */
+@mixin rem-font-size ($size) {
+  font-size: $size + px; font-size: ($size / 10) + rem; /* =$size + px */
 }
 
 
@@ -86,6 +119,14 @@
 // <name>="<mod>"
 // basis="auto"
 @function make-key-eq-val-name($name, $mod, $prefix) {
+  //
+  // @if type-of($name) != "string" {
+  //   @warn "$name: `#{$name}` is not a string";
+  // }
+  //
+  // @if type-of($mod) != "string" {
+  //   @warn "$mod: `#{$mod}` is not a string";
+  // }
   @if $mod {
     @return '#{$prefix}#{$name}="#{$mod}"';
   }
@@ -96,12 +137,14 @@
 // .row
 // .row-reverse
 // .row.reverse
-@function make-class-name($name, $mod, $prefix) {
+@function make-class-names($name, $mod, $prefix) {
   $dash-name: make-dash-name($name, $mod, $prefix);
   // note: we don't need key-val-name for classes, but its a proxy for now
   $key-val-name: make-key-eq-val-name($name, $mod, $prefix);
   @if $key-val-name {
-    @return '.#{$dash-name}, .#{$name}.#{$mod}';
+    @if(type-of($mod) == string) {
+      @return '.#{$dash-name}, .#{$name}.#{$mod}';
+    }
   }
   @return '.#{$dash-name}';
 }
@@ -120,7 +163,9 @@
 // [row="reverse"]
 // [row-reverse]
 // [row][reverse]
-// NOTE: adds brackets
+//
+// TODO: should we generate data-* attrs?
+//
 @function make-attr-names($name, $mod, $prefix) {
   $key-val-name: make-key-eq-val-name($name, $mod, $prefix);
   $dash-name: make-dash-name($name, $mod, $prefix);
@@ -128,7 +173,11 @@
   // if we have a key="val" name generated,
   // we can also create [key][val]
   @if $key-val-name {
-    @return '[#{$key-val-name}], [#{$dash-name}], [#{$name}][#{$mod}]';
+    @if(type-of($mod) == string) {
+      @return '[#{$key-val-name}], [#{$dash-name}], [#{$prefix}#{$name}][#{$prefix}#{$mod}]';
+    } @else {
+      @return '[#{$key-val-name}], [#{$dash-name}]';
+    }
   }
   @return '[#{$dash-name}]';
 }

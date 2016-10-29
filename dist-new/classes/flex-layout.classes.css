@@ -1,72 +1,110 @@
 /* classes
    -------------------------------- */
-.layout {
+.fx-layout {
   display: flex;
 }
 
-.flex {
+.fx-flex {
   flex: 1 1 0%;
 }
 
-.flex-content, .flex.content {
+.fx-flex-content, .flex.content {
   flex: content;
 }
 
-.basis-auto, .basis.auto {
+.fx-basis-auto, .basis.auto {
   flex-basis: auto;
 }
 
-.basis-zero, .basis.zero {
+.fx-basis-zero, .basis.zero {
   flex-basis: 0%;
 }
 
-.column {
+.fx-column {
   flex-direction: column;
   display: flex;
 }
 
-.column-reverse, .column.reverse {
+.fx-column-reverse, .column.reverse {
   flex-direction: column-reverse;
 }
 
-.column-inline, .column.inline {
+.fx-column-inline, .column.inline {
   flex-direction: column;
   display: inline-flex;
 }
 
-.row {
+.fx-row {
   flex-direction: row;
   display: flex;
 }
 
-.row-reverse, .row.reverse {
+.fx-row-reverse, .row.reverse {
   flex-direction: row-reverse;
 }
 
-.row-inline, .row.inline {
+.fx-row-inline, .row.inline {
   flex-direction: row;
   display: inline-flex;
 }
 
-.wrap {
+.fx-wrap {
   flex-wrap: wrap;
 }
 
-.wrap-reverse, .wrap.reverse {
+.fx-wrap-reverse, .wrap.reverse {
   flex-wrap: wrap-reverse;
 }
 
-.no-wrap {
+.fx-no-wrap {
   flex-wrap: nowrap;
 }
 
-.fit {
+.fx-fit {
   margin: 0px;
   width: 100%;
   min-height: auto;
   height: inherit;
 }
 
-.foo-bar, .foo.bar {
-  border: 1px solid #990000;
+.fx-height-max {
+  height: 100%;
+}
+
+.fx-hide {
+  display: none !important;
+}
+
+.fx-outline {
+  outline: 1px solid #990000;
+}
+
+.fx-outline-red {
+  outline: 1px solid #990000;
+}
+
+.fx-outline-gray {
+  outline: 1px solid #999;
+}
+
+.fx-overflow-hidden {
+  overflow: hidden;
+}
+
+.fx-scrollable {
+  overflow: scroll;
+}
+
+.fx-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fx-break-word {
+  word-break: break-all;
+}
+
+.fx-nowrap {
+  white-space: nowrap;
 }

@@ -1,0 +1,266 @@
+// basic vars
+// -----------------------------------------------
+// optional prefix could be useful for namespace
+$prefix: 'fx-'; // data- for attribs
+$base-font: 14;
+
+// This set is quite small.
+$num-nil: 0;
+// $num-xs: 1;
+// $num-sm: 2;
+// $num-md: 3;
+// $num-lg: 5;
+// $num-xl: 8;
+// $num-xxl: 10;
+// $num-xxxl: 12;
+// $num-xxxxl: 15;
+// $num-max: 300;
+// Is larger numbers better?
+$num-xs: 2;
+$num-sm: 4;
+$num-md: 6;
+$num-lg: 10;
+$num-xl: 15;
+$num-xxl: 20;
+$num-xxxl: 30;
+$num-xxxxl: 40;
+$num-max: 300;
+
+// use functions to make units:
+// px($num) -> 10px,
+// em($num) -> 10em,
+// etc.
+$numMap: (  nil: $num-nil,
+            xs: $num-xs,
+            sm: $num-sm,
+            md: $num-md,
+            lg: $num-lg,
+            xl: $num-xl,
+            xxl: $num-xxl,
+            xxxl: $num-xxxl,
+            xxxxl: $num-xxxxl,
+            max: $num-max);
+
+
+// flex, row, column
+// foundational rules map
+// -----------------------------------------------
+$layoutRules: (
+  (
+    name: layout,
+    rules: (
+      display: flex
+    )
+  ),
+  (
+    name: flex,
+    rules: (
+      flex: 1 1 0%
+    )
+  ), (
+    name: flex,
+    mod: content,
+    comment: 'Currently no support for flex: content',
+    rules: (
+      flex: content
+    )
+  ), (
+    name: basis,
+    mod: auto,
+    rules: (
+      flex-basis: auto
+    )
+  ), (
+    name: basis,
+    mod: zero,
+    rules: (
+      flex-basis: 0%
+    )
+  ), (
+    name: column,
+    rules: (
+      flex-direction: column,
+      display: flex
+    )
+  ), (
+    name: column,
+    mod: reverse,
+    rules: (
+      flex-direction: column-reverse
+    )
+  ), (
+    name: column,
+    mod: inline,
+    rules: (
+      flex-direction: column,
+      display: inline-flex
+    )
+  ),(
+    name: row,
+    rules: (
+      flex-direction: row,
+      display: flex
+    )
+  ), (
+    name: row,
+    mod: reverse,
+    rules: (
+      flex-direction: row-reverse
+    )
+  ), (
+    name: row,
+    mod: inline,
+    rules: (
+      flex-direction: row,
+      display: inline-flex
+    )
+  ), (
+    name: wrap,
+    rules: (
+      flex-wrap: wrap
+    )
+  ), (
+    name: wrap,
+    mod: reverse,
+    rules: (
+      flex-wrap: wrap-reverse
+    )
+  ), (
+    name: no-wrap,
+    rules: (
+      flex-wrap: nowrap
+    )
+  ), (
+    name: fit,
+    comment: 'Match the parent',
+    rules: (
+      margin: 0px,
+      width: 100%,
+      min-height: auto,
+      height: inherit
+    )
+  ), (
+    name: height-max,
+    rules: (
+      height: 100%
+    )
+  ),
+  // next set is miscellaneous
+  (
+    name: hide,
+    rules: (
+      display: none !important
+    )
+  ), (
+    name: outline,
+    rules: (
+      outline: 1px solid #990000
+    )
+  ), (
+    name: outline,
+    mod: red,
+    rules: (
+      outline: 1px solid #990000
+    )
+  ), (
+    name: outline,
+    mod: gray,
+    rules: (
+      outline: 1px solid #999
+    )
+  ), (
+    name: overflow-hidden,
+    rules: (
+      overflow: hidden
+    )
+  ), (
+    name: scrollable,
+    rules: (
+      overflow: scroll
+    )
+  ), (
+    name: truncate,
+    rules: (
+      overflow: hidden,
+      text-overflow: ellipsis,
+      white-space: nowrap
+    )
+  ), (
+    name: break-word,
+    rules: (
+      word-break: break-all, // Firefox
+      //word-break: break-word // Webkit and Microsoft
+    )
+  ), (
+    name: nowrap,
+    rules: (
+      white-space: nowrap
+    )
+  )
+);
+
+// 
+// @debug @type-of((1,2,3,4));
+// @debug @type-of((foo: bar));
+
+
+// grow & shrink
+// -----------------------------------------------
+$growPropsList: (grow, shrink);
+
+
+// order
+// -----------------------------------------------
+$orderList: (
+  (first, 1),
+  (second, 2),
+  (third, 3),
+  (fourth, 4),
+  (fifth, 5),
+  (sixth, 6),
+  (seventh, 7),
+  (eighth, 8),
+  (ninth, 9),
+  (tenth, 10),
+  (eleventh, 11),
+  (twelfth, 12)
+);
+
+$orderProp: order;
+
+
+// axis maps
+// -----------------------------------------------
+$justifyContentMap: ( start: 'flex-start',
+                      end: 'flex-end',
+                      center: 'center',
+                      space-between: 'space-between',
+                      space-around: 'space-around');
+
+$alignItemsMap:     ( start: 'flex-start',
+                      end: 'flex-end',
+                      center: 'center',
+                      stretch: 'stretch',
+                      baseline: 'baseline');
+
+$alignContentMap:   ( start: 'flex-start',
+                      end: 'flex-end',
+                      center: 'center',
+                      stretch: 'stretch',
+                      space-between: 'space-between',
+                      space-around: 'space-around');
+
+
+// media queries
+// -----------------------------------------------
+$mediaDevices:      ( mobile: 'max-width: 479px',
+                      tablet: 'max-width: 767px',
+                      laptop: 'min-width: 768px) and (max-width: 979px',
+                      desktop: 'min-width: 1200px');
+
+$mediaSizes:        ( sm: 'max-width: 479px',
+                      md: 'max-width: 767px',
+                      lg: 'min-width: 768px) and (max-width: 979px',
+                      xl: 'min-width: 1200px');
+
+$mediaOrientation: column, row;

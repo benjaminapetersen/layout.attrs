@@ -1,0 +1,47 @@
+[fx-order="1"], [fx-order-1], [fx-first] {
+  order: 1;
+}
+
+[fx-order="2"], [fx-order-2], [fx-second] {
+  order: 2;
+}
+
+[fx-order="3"], [fx-order-3], [fx-third] {
+  order: 3;
+}
+
+[fx-order="4"], [fx-order-4], [fx-fourth] {
+  order: 4;
+}
+
+[fx-order="5"], [fx-order-5], [fx-fifth] {
+  order: 5;
+}
+
+[fx-order="6"], [fx-order-6], [fx-sixth] {
+  order: 6;
+}
+
+[fx-order="7"], [fx-order-7], [fx-seventh] {
+  order: 7;
+}
+
+[fx-order="8"], [fx-order-8], [fx-eighth] {
+  order: 8;
+}
+
+[fx-order="9"], [fx-order-9], [fx-ninth] {
+  order: 9;
+}
+
+[fx-order="10"], [fx-order-10], [fx-tenth] {
+  order: 10;
+}
+
+[fx-order="11"], [fx-order-11], [fx-eleventh] {
+  order: 11;
+}
+
+[fx-order="12"], [fx-order-12], [fx-twelfth] {
+  order: 12;
+}
