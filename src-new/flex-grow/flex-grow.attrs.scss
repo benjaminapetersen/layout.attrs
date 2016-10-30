@@ -1,0 +1,26 @@
+@import '../variables';
+@import '../functions';
+
+
+/* flex grow
+----------------------------------------------- */
+
+// aha, gotta fix [grow][0] and .grow.0 cuz a num cant start a class/attr
+// @warn make-attr-names make-attr-names(foo, 0, '');
+// @warn make-class-name make-class-name(foo, 0, '');
+// @warn make-dash-name make-dash-name(foo, 0, '');
+// @warn make-key-eq-val-name make-key-eq-val-name(foo, 0, '');
+// http://sass-lang.com/documentation/Sass/Script/Functions.html#type_of-instance_method
+// type-of(100px)  => number
+// type-of(asdf)   => string
+// type-of("asdf") => string
+// type-of(true)   => bool
+// type-of(#fff)   => color
+// type-of(blue)   => color
+@each $growProp in $growPropsList {
+  @for $i from 1 through 12 {
+    #{make-attr-names($growProp, $i, $prefix)} {
+        flex-#{$growProp}: $i;
+    }
+  }
+}

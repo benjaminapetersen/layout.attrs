@@ -1,0 +1,19 @@
+@import '../variables';
+@import '../functions';
+
+/* resize (optional)
+  - shorthand replacement for grow & shrink
+  - has a larger footprint in file size, but terse:
+  - replace this:
+    <div class="flex grow-3 shrink-5">
+  - with this:
+    <div class="flex resize-3-5">
+----------------------------------------------- */
+@for $grow from 0 through 12 {
+    @for $shrink from 0 through 12 {
+       .#{$prefix}resize-#{$grow}-#{$shrink} {
+            flex-grow: $grow;
+            flex-shrink: $shrink;
+        }
+    }
+}

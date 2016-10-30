@@ -1,0 +1,121 @@
+/* flex grow
+----------------------------------------------- */
+.fx-grow-1 {
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.fx-grow-2 {
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+.fx-grow-3 {
+  -ms-flex-positive: 3;
+  flex-grow: 3;
+}
+
+.fx-grow-4 {
+  -ms-flex-positive: 4;
+  flex-grow: 4;
+}
+
+.fx-grow-5 {
+  -ms-flex-positive: 5;
+  flex-grow: 5;
+}
+
+.fx-grow-6 {
+  -ms-flex-positive: 6;
+  flex-grow: 6;
+}
+
+.fx-grow-7 {
+  -ms-flex-positive: 7;
+  flex-grow: 7;
+}
+
+.fx-grow-8 {
+  -ms-flex-positive: 8;
+  flex-grow: 8;
+}
+
+.fx-grow-9 {
+  -ms-flex-positive: 9;
+  flex-grow: 9;
+}
+
+.fx-grow-10 {
+  -ms-flex-positive: 10;
+  flex-grow: 10;
+}
+
+.fx-grow-11 {
+  -ms-flex-positive: 11;
+  flex-grow: 11;
+}
+
+.fx-grow-12 {
+  -ms-flex-positive: 12;
+  flex-grow: 12;
+}
+
+.fx-shrink-1 {
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.fx-shrink-2 {
+  -ms-flex-negative: 2;
+  flex-shrink: 2;
+}
+
+.fx-shrink-3 {
+  -ms-flex-negative: 3;
+  flex-shrink: 3;
+}
+
+.fx-shrink-4 {
+  -ms-flex-negative: 4;
+  flex-shrink: 4;
+}
+
+.fx-shrink-5 {
+  -ms-flex-negative: 5;
+  flex-shrink: 5;
+}
+
+.fx-shrink-6 {
+  -ms-flex-negative: 6;
+  flex-shrink: 6;
+}
+
+.fx-shrink-7 {
+  -ms-flex-negative: 7;
+  flex-shrink: 7;
+}
+
+.fx-shrink-8 {
+  -ms-flex-negative: 8;
+  flex-shrink: 8;
+}
+
+.fx-shrink-9 {
+  -ms-flex-negative: 9;
+  flex-shrink: 9;
+}
+
+.fx-shrink-10 {
+  -ms-flex-negative: 10;
+  flex-shrink: 10;
+}
+
+.fx-shrink-11 {
+  -ms-flex-negative: 11;
+  flex-shrink: 11;
+}
+
+.fx-shrink-12 {
+  -ms-flex-negative: 12;
+  flex-shrink: 12;
+}

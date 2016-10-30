@@ -1,0 +1,57 @@
+@import '../variables';
+@import '../functions';
+
+/* media queries by size name,
+   - sm="column"
+   - md="row"
+   - etc
+----------------------------------------------- */
+@each $size, $query in $mediaSizes {
+  @media (unquote($query)) {
+    @each $orientation in $mediaOrientation {
+      [#{make-key-eq-val-name($size, $orientation, $prefix)}] {
+        flex-direction: $orientation !important;
+      }
+    }
+
+    [#{$prefix}conceal~="#{$size}"] {
+      display: none !important;
+    }
+  }
+}
+
+/* media queries by device name,
+   - mobile="column"
+   - tablet="row"
+   - etc.
+   @DEPRECATED in favor of sm,md,lg, etc above
+----------------------------------------------- */
+@each $device, $query in $mediaDevices {
+  @media (unquote($query)) {
+    @each $orientation in $mediaOrientation {
+      [#{make-key-eq-val-name($device, $orientation, $prefix)}] {
+        flex-direction: $orientation !important;
+      }
+    }
+
+    [#{$prefix}conceal~="#{$device}"] {
+        display: none !important;
+    }
+  }
+}
+
+
+/* hiding components by device name
+   - sm, md, lg, xl
+----------------------------------------------- */
+
+// hide="mobile tablet"
+// hide="laptop desktop"
+
+
+/* hiding components by size name
+   - sm, md, lg, xl
+----------------------------------------------- */
+
+// hide="sm md"
+// hide="lg xl"

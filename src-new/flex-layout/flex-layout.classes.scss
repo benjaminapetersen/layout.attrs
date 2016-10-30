@@ -1,0 +1,15 @@
+@import '../variables';
+@import '../functions';
+
+/* classes
+   -------------------------------- */
+// .layout {}
+// .flex {}
+// .basis-auto {}
+@each $map in $layoutRules {
+  #{ make-class-names(map-get($map, name), map-get($map, mod), $prefix) } {
+    @each $key, $value in map-get($map, rules)  {
+      #{$key}: $value;
+    }
+  }
+}

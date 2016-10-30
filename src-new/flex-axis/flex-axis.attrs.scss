@@ -1,0 +1,37 @@
+@import '../variables';
+@import '../functions';
+
+/* main axis
+----------------------------------------------- */
+@each $key, $val in $justifyContentMap {
+  [#{make-key-eq-val-name(main-axis, $key, $prefix)}], [#{make-dash-name(main-axis, $key, $prefix)}] {
+    justify-content: #{$val};
+  }
+}
+
+/* cross axis
+----------------------------------------------- */
+@each $key, $val in $alignItemsMap {
+  [#{make-key-eq-val-name(cross-axis, $key, $prefix)}], [#{make-dash-name(cross-axis, $key, $prefix)}] {
+    align-items: #{$val};
+  }
+}
+
+/*  cross axis align
+    TODO: dislike the name.
+    NOTE: this does nothing if there is a
+    single line of content in the container (spec)
+----------------------------------------------- */
+@each $key, $val in $alignContentMap {
+  [#{make-key-eq-val-name(cross-axis-align, $key, $prefix)}], [#{make-dash-name(cross-axis-align, $key, $prefix)}] {
+    align-content: #{$val};
+  }
+}
+
+/* self, for overriding the parent settings above
+----------------------------------------------- */
+@each $key, $val in $alignItemsMap {
+  [#{make-key-eq-val-name(self, $key, $prefix)}], [#{make-dash-name(self, $key, $prefix)}] {
+    align-self: #{$val};
+  }
+}

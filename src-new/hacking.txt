@@ -1,0 +1,25 @@
+This and that random SASS errors
+
+Error: Base-level rules cannot contain the parent-selector-referencing character '&'.
+- if this happens using a funciton such as:
+    make-key-eq-val-name($foo, $bar, $prefix)
+  then it is likely that you forgot to make it into a selector:
+    [selector]
+    .selector
+  the following auto apply selectors:
+    make-attr-names()
+    make-class-names()
+  but the raw fns lack the selector wrappers
+- making an attr name like the following works:
+  [#{make-key-eq-val-name($device, $orientation, $prefix)}] {
+    foo: bar;
+  }
+- making a class name like the following works:
+  .#{make-key-eq-val-name($device, $orientation, $prefix)} {
+    foo: bar;
+  }
+- making invalid class names wont work:
+  // .foo="bar" is not a valid class, [foo="bar"] is a valid attr
+  .#{make-key-eq-val-name($device, $orientation, $prefix)} {
+    foo: bar;
+  }

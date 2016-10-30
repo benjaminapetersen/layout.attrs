@@ -1,0 +1,59 @@
+.fx-order-1, .fx-first {
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.fx-order-2, .fx-second {
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.fx-order-3, .fx-third {
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.fx-order-4, .fx-fourth {
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.fx-order-5, .fx-fifth {
+  -ms-flex-order: 5;
+  order: 5;
+}
+
+.fx-order-6, .fx-sixth {
+  -ms-flex-order: 6;
+  order: 6;
+}
+
+.fx-order-7, .fx-seventh {
+  -ms-flex-order: 7;
+  order: 7;
+}
+
+.fx-order-8, .fx-eighth {
+  -ms-flex-order: 8;
+  order: 8;
+}
+
+.fx-order-9, .fx-ninth {
+  -ms-flex-order: 9;
+  order: 9;
+}
+
+.fx-order-10, .fx-tenth {
+  -ms-flex-order: 10;
+  order: 10;
+}
+
+.fx-order-11, .fx-eleventh {
+  -ms-flex-order: 11;
+  order: 11;
+}
+
+.fx-order-12, .fx-twelfth {
+  -ms-flex-order: 12;
+  order: 12;
+}

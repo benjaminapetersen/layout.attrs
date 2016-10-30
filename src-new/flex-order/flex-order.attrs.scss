@@ -1,0 +1,10 @@
+@import '../variables';
+@import '../functions';
+
+// order="1", order="2" style
+// -----------------------------------
+@each $orderSet in $orderList {
+  #{make-attr-names($orderProp, last($orderSet), $prefix)}, #{make-attr-names(first($orderSet), null, $prefix )} {
+    #{$orderProp}: last($orderSet);
+  }
+}
