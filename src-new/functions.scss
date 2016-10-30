@@ -108,6 +108,7 @@
 // <name>-<mod>
 // flex
 // row-inline
+// NOTE: does not return a valid selector!
 @function make-dash-name($name, $mod, $prefix) {
   @if $mod {
     @return #{$prefix}#{$name}-#{$mod};
@@ -118,6 +119,7 @@
 // for attr names that are key-value pairs:
 // <name>="<mod>"
 // basis="auto"
+// NOTE: does not return a valid selector!
 @function make-key-eq-val-name($name, $mod, $prefix) {
   //
   // @if type-of($name) != "string" {

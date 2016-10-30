@@ -4,49 +4,49 @@
    - etc
 ----------------------------------------------- */
 @media (max-width: 479px) {
-  [fx-sm="column"] {
+  .fx-sm-column {
     flex-direction: column !important;
   }
-  [fx-sm="row"] {
+  .fx-sm-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="sm"] {
+  .fx-conceal-sm {
     display: none !important;
   }
 }
 
 @media (max-width: 767px) {
-  [fx-md="column"] {
+  .fx-md-column {
     flex-direction: column !important;
   }
-  [fx-md="row"] {
+  .fx-md-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="md"] {
+  .fx-conceal-md {
     display: none !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-  [fx-lg="column"] {
+  .fx-lg-column {
     flex-direction: column !important;
   }
-  [fx-lg="row"] {
+  .fx-lg-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="lg"] {
+  .fx-conceal-lg {
     display: none !important;
   }
 }
 
 @media (min-width: 1200px) {
-  [fx-xl="column"] {
+  .fx-xl-column {
     flex-direction: column !important;
   }
-  [fx-xl="row"] {
+  .fx-xl-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="xl"] {
+  .fx-conceal-xl {
     display: none !important;
   }
 }
@@ -55,52 +55,52 @@
    - mobile="column"
    - tablet="row"
    - etc.
-   NOTE: may deprecate in favor of the above 
+   @DEPRECATED in favor of sm,md,lg, etc above
 ----------------------------------------------- */
 @media (max-width: 479px) {
-  [fx-mobile="column"] {
+  .fx-mobile-column {
     flex-direction: column !important;
   }
-  [fx-mobile="row"] {
+  .fx-mobile-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="mobile"] {
+  .fx-conceal-mobile {
     display: none !important;
   }
 }
 
 @media (max-width: 767px) {
-  [fx-tablet="column"] {
+  .fx-tablet-column {
     flex-direction: column !important;
   }
-  [fx-tablet="row"] {
+  .fx-tablet-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="tablet"] {
+  .fx-conceal-tablet {
     display: none !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-  [fx-laptop="column"] {
+  .fx-laptop-column {
     flex-direction: column !important;
   }
-  [fx-laptop="row"] {
+  .fx-laptop-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="laptop"] {
+  .fx-conceal-laptop {
     display: none !important;
   }
 }
 
 @media (min-width: 1200px) {
-  [fx-desktop="column"] {
+  .fx-desktop-column {
     flex-direction: column !important;
   }
-  [fx-desktop="row"] {
+  .fx-desktop-row {
     flex-direction: row !important;
   }
-  [fx-conceal~="desktop"] {
+  .fx-conceal-desktop {
     display: none !important;
   }
 }

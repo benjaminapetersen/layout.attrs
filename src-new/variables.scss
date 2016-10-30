@@ -196,10 +196,52 @@ $layoutRules: (
     rules: (
       white-space: nowrap
     )
+  ),
+  // positioning
+  (
+    name: block,
+    rules: (
+      display: block
+    )
+  ), (
+    name: inline,
+    rules: (
+      display: inline-block
+    )
+  ), (
+    name: absolute,
+    rules: (
+      position: absolute
+    )
+  ), (
+    name: relative,
+    rules: (
+      position: relative
+    )
+  ), (
+    name: top,
+    rules: (
+      top: 0px
+    )
+  ), (
+    name: bottom,
+    rules: (
+      bottom: 0px
+    )
+  ), (
+    name: left,
+    rules: (
+      left: 0px
+    )
+  ), (
+    name: right,
+    rules: (
+      right: 0px
+    )
   )
 );
 
-// 
+//
 // @debug @type-of((1,2,3,4));
 // @debug @type-of((foo: bar));
 

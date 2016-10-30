@@ -8,6 +8,8 @@
   //   /* #{map-get($map, comment)} */
   // }
   #{make-attr-names(map-get($map, name), map-get($map, mod), $prefix)} {
+    // TODO: rules() might be better as a list than a map,
+    // as some rules have the same name (ie, whatever, see break-word)
     @each $key, $value in map-get($map, rules)  {
       #{$key}: $value;
     }

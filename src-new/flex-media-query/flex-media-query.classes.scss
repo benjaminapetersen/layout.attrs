@@ -9,12 +9,12 @@
 @each $size, $query in $mediaSizes {
   @media (unquote($query)) {
     @each $orientation in $mediaOrientation {
-      [#{make-key-eq-val-name($size, $orientation, $prefix)}] {
+      .#{make-dash-name($size, $orientation, $prefix)} {
         flex-direction: $orientation !important;
       }
     }
 
-    [#{$prefix}conceal~="#{$size}"] {
+    .#{make-dash-name(conceal, $size, $prefix)} {
       display: none !important;
     }
   }
@@ -24,22 +24,21 @@
    - mobile="column"
    - tablet="row"
    - etc.
-   NOTE: may deprecate in favor of the above 
+   @DEPRECATED in favor of sm,md,lg, etc above
 ----------------------------------------------- */
 @each $device, $query in $mediaDevices {
   @media (unquote($query)) {
     @each $orientation in $mediaOrientation {
-      [#{make-key-eq-val-name($device, $orientation, $prefix)}] {
+      .#{make-dash-name($device, $orientation, $prefix)} {
         flex-direction: $orientation !important;
       }
     }
 
-    [#{$prefix}conceal~="#{$device}"] {
-        display: none !important;
+    .#{make-dash-name(conceal, $device, $prefix)} {
+      display: none !important;
     }
   }
 }
-
 
 /* hiding components by device name
    - sm, md, lg, xl

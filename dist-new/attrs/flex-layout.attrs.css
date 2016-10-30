@@ -108,3 +108,35 @@
 [fx-nowrap] {
   white-space: nowrap;
 }
+
+[fx-block] {
+  display: block;
+}
+
+[fx-inline] {
+  display: inline-block;
+}
+
+[fx-absolute] {
+  position: absolute;
+}
+
+[fx-relative] {
+  position: relative;
+}
+
+[fx-top] {
+  top: 0px;
+}
+
+[fx-bottom] {
+  bottom: 0px;
+}
+
+[fx-left] {
+  left: 0px;
+}
+
+[fx-right] {
+  right: 0px;
+}
