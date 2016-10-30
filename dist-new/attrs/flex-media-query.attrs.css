@@ -5,9 +5,11 @@
 ----------------------------------------------- */
 @media (max-width: 479px) {
   [fx-sm="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-sm="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="sm"] {
@@ -17,9 +19,11 @@
 
 @media (max-width: 767px) {
   [fx-md="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-md="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="md"] {
@@ -29,9 +33,11 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
   [fx-lg="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-lg="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="lg"] {
@@ -41,9 +47,11 @@
 
 @media (min-width: 1200px) {
   [fx-xl="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-xl="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="xl"] {
@@ -55,13 +63,15 @@
    - mobile="column"
    - tablet="row"
    - etc.
-   NOTE: may deprecate in favor of the above 
+   @DEPRECATED in favor of sm,md,lg, etc above
 ----------------------------------------------- */
 @media (max-width: 479px) {
   [fx-mobile="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-mobile="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="mobile"] {
@@ -71,9 +81,11 @@
 
 @media (max-width: 767px) {
   [fx-tablet="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-tablet="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="tablet"] {
@@ -83,9 +95,11 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
   [fx-laptop="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-laptop="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="laptop"] {
@@ -95,9 +109,11 @@
 
 @media (min-width: 1200px) {
   [fx-desktop="column"] {
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   [fx-desktop="row"] {
+    -ms-flex-direction: row !important;
     flex-direction: row !important;
   }
   [fx-conceal~="desktop"] {

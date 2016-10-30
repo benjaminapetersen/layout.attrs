@@ -24,7 +24,7 @@
    - mobile="column"
    - tablet="row"
    - etc.
-   NOTE: may deprecate in favor of the above 
+   @DEPRECATED in favor of sm,md,lg, etc above
 ----------------------------------------------- */
 @each $device, $query in $mediaDevices {
   @media (unquote($query)) {
